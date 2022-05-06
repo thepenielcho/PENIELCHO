@@ -6,9 +6,9 @@ export default {
   mounted() {
     const scriptTag = document.createElement('SCRIPT')
     scriptTag.setAttribute('src', 'https://utteranc.es/client.js')
-    scriptTag.setAttribute('repo', 'thepenielcho/Blog')
+    scriptTag.setAttribute('repo', 'thepenielcho/PENIELCHO')
     scriptTag.setAttribute('issue-term', 'pathname')
-    scriptTag.setAttribute('theme', 'github-light')
+    scriptTag.setAttribute('theme', 'preferred-color-scheme')
     scriptTag.setAttribute('crossorigin', 'anonymous')
     scriptTag.setAttribute('async', 'async')
     this.$el.append(scriptTag)
