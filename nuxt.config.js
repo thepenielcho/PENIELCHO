@@ -11,8 +11,48 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Your Nearest Developer Advocate 🥑' },
+      { name: 'format-detection', content: 'telephone=no' },
+
+      {
+        hid: 't-type',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Peniel Cho' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://penielcho.com'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Peniel Cho'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'Your Nearest Developer Advocate 🥑'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/OpenGraph.png'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/OpenGraph.png'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Peniel Cho, Your Nearest Developer Advocate 🥑'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
