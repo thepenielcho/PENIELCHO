@@ -2,8 +2,7 @@
 <div class="w-full googlelightgrey section-outline">
     <div class="pb-6 pt-10 md:pb-10 md:pt-16 max-w-3xl mx-auto px-4 md:px-3 fadeinupcom">
             <div class="full-border py-2 md:py-3 rounded-lg bg-amber-100 googletextblack font-semibold text-base md:text-xl flex items-center justify-center space-x-2 md:space-x-4">
-                <!-- <div class="flex"> <Rss class="w-5 md:w-6 mr-1 md:mr-2" /> 블로그 아티클을 RSS로 구독하세요!</div> -->
-                <div class="flex"> <Rss class="w-5 md:w-6 mr-1 md:mr-2" /> Subscribe New Articles via RSS!</div>
+                <div class=""> <Rss class="w-5 md:w-6 mr-1 md:mr-2 inline" /> Subscribe <span class="hidden md:inline">New Articles</span> via RSS!</div>
                 <div class="transition duration-100 rounded-lg font-semibold px-1.5 py-1 text-xs md:text-sm full-border bg-white hover:bg-amber-300 rss-btn">RSS Feed</div>
             </div>
 
@@ -11,7 +10,7 @@
 
                 <div class="group fadeinupcom" v-for="article of articles" :key="article">
                     <nuxt-link :to="{path: `/articles/${article.slug}`}">
-                        <div class="block md:flex rounded-lg bg-white outline-item shadow-md">
+                        <div class="block md:flex rounded-lg bg-white border-item shadow-md">
                             <div class="w-full md:w-1/2">
                                 <div class="hidden md:inline-block cardborder bg-img w-full h-40 md:h-full" :style="{ backgroundImage: `url(/${article.slug}/${article.img})` }"></div>
                                 <img class="block md:hidden cardborder bg-img profile min-h-content" :src="require(`~/static/${article.slug}/${article.img}`)" alt=""/>
@@ -160,6 +159,11 @@ methods: {
 
 .outline-item {
     outline: 2px solid rgba(17, 24, 39);
+}
+.border-item {
+    border-width: 2px;
+    border-color: rgba(17, 24, 39);
+    border-radius: 0.5rem;
 }
 
 .section-border {

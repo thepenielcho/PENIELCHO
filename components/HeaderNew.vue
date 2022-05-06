@@ -4,7 +4,7 @@
         <div class="flex justify-start">
             <div>
             <div class="dropdown relative font-medium">
-                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="#" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="#" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                 <Menu class="h-6 w-6" />
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
@@ -33,7 +33,7 @@
         <div class="justify-center">
             <div>
             <div class="dropdown relative">
-                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="#" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="#" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                 Articles <Down />
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
@@ -74,6 +74,9 @@ export default {
 </script>
 
 <style>
+a:focus {
+    outline: none;
+}
 .bg-img {
         background-position: center;
         background-repeat:  no-repeat;
@@ -101,6 +104,11 @@ export default {
 .profile {
     object-fit: cover;
     /* overflow: hidden; */
+}
+
+.no-border {
+    border-width: 0px !important;
+    box-shadow: 0 0 #0000 !important;
 }
 
 .ticker-wrapper {
