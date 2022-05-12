@@ -10,7 +10,7 @@
 
                 <div class="group fadeinupcom" v-for="article of articles" :key="article">
                     <nuxt-link :to="{path: `/articles/${article.slug}`}">
-                        <div class="block md:flex rounded-lg bg-white border-item shadow-md">
+                        <div class="block md:flex rounded-lg bg-white border-item shadow-md group">
                             <div class="w-full md:w-1/2">
                                 <div class="hidden md:inline-block cardborder bg-img w-full h-40 md:h-full" :style="{ backgroundImage: `url(/${article.slug}/${article.img})` }"></div>
                                 <img class="block md:hidden cardborder bg-img profile min-h-content" :src="require(`~/static/${article.slug}/${article.img}`)" alt=""/>
@@ -20,7 +20,7 @@
                                 <p class="googletextblack text-base mb-3 keep-all">
                                     {{article.description}}
                                 </p>
-                                <p class="googletextblack text-sm md:text-base">{{article.readingStats.text}}</p>
+                                <p class="googletextblack text-sm md:text-base">{{article.readingStats.text}} <span class="pl-2 hidden group-hover:inline transition duration-100">Read More</span> </p>
                             </div>
                         </div>
                     </nuxt-link>

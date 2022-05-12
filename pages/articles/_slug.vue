@@ -146,12 +146,12 @@ export default {
             hid: 'og:image',
             property: 'og:image',
             // content: this.article.img
-            content: `https://raw.githubusercontent.com/Team-COSADAMA/Blog/main/static/${this.article.slug}/${this.article.img}`
+            content: `https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/${this.article.slug}/${this.article.img}`
             },
             {
             hid: 'og:image:secure_url',
             property: 'og:image:secure_url',
-            content: `https://raw.githubusercontent.com/Team-COSADAMA/Blog/main/static/${this.article.slug}/${this.article.img}`
+            content: `https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/${this.article.slug}/${this.article.img}`
             },
             {
             hid: 'og:image:alt',
@@ -161,7 +161,7 @@ export default {
             {
             hid: 'og:url',
             name: 'og:url',
-            content: `https://www.blog.cosadama.com/articles/${this.$route.params.slug}`
+            content: `https://penielcho.com/articles/${this.$route.params.slug}`
             },
             ],
         }
