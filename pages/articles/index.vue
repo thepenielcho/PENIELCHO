@@ -1,5 +1,11 @@
 <template>
-  <div></div>
+  <div>
+
+    <ArticleSection />
+
+    <MainArticle />
+
+  </div>
 </template>
 
 <script>

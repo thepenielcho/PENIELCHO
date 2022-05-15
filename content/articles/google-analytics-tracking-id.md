@@ -3,7 +3,7 @@ title: Google Analytics 추적 ID 발급받기
 description: 구글 애널리틱스 추적 ID 발급방법에 대해 알아보자.
 slug: google-analytics-tracking-id
 img: google-analytics.png
-datetime: 2021. 11. 24.
+datetime: 2021-11-24
 category: Front-End
 author: 조용주
 language: Korean

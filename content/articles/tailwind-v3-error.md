@@ -3,7 +3,7 @@ title: "Tailwind CSS 버전 V2에서 V3으로 에러 없이 업그레이드하�
 description: "기존 프로젝트의 V2 Tailwind CSS V3으로 에러 없이 버전 업그레이드하는 법에 대해 알아보자."
 slug: tailwind-v3-error
 img: tailwind.jpeg
-datetime: 2022. 02. 08.
+datetime: 2022-02-08
 category: Front-End
 author: 조용주
 language: Korean

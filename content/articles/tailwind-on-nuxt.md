@@ -3,7 +3,7 @@
 title: 프로젝트에 Tailwind CSS 적용하기
 description: 프로젝트에 Tailwind CSS를 적용하는 방법을 Nuxt 프레임워크를 중심으로 알아봐요.
 slug: tailwind-on-nuxt
-datetime: 2021. 11. 13.
+datetime: 2021-11-13
 img: tailwind.jpeg
 category: Front-End
 author: 조용주

@@ -9,11 +9,10 @@
                     <div class="text-xl md:text-4xl font-semibold googletextblack text-center custom-text">{{article.title}}</div>
                 </div>
                 </div> -->
+                <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">{{article.category}} · {{formatDate(article.datetime)}}</div>
                 <div class="text-2xl md:text-4xl font-semibold googletextblack text-center custom-text article-title">{{article.title}}</div>
-                <div class="text-base md:text-lg googletextblack text-center mt-5 md:mt-6 mb-6 md:mb-8 opacity-50"> 
-                    {{article.description}}
-                </div>
-                <!-- <div class="text-lg md:text-xl googletextblack font-medium text-center"> 
+                <div class="text-base md:text-lg googletextblack text-center mt-5 md:mt-6 mb-6 md:mb-8 opacity-50">{{article.description}}</div>
+                <!-- <div class="text-lg md:text-xl googletextblack font-medium text-center">
                     <nuxt-link :to='`/category/${article.category}`' class="hover:underline text-base md:text-2xl text-center">{{article.category}}</nuxt-link>
                 </div> -->
                 <div class="flex justify-center">
@@ -28,7 +27,7 @@
                         <div class="flex items-center">
                             <div>
                                 <div class="font-semibold text-lg md:text-xl">Peniel Cho</div>
-                                <div class="text-xs md:text-sm pt-1 opacity-75"> <span class="hidden md:inline">Yout Nearest</span> Developer Advocate 🥑 <br/> 저를 더 자세히 알고 싶으시다면 <br class="md:hidden inline" /> <nuxt-link to="/about" class="underline">About</nuxt-link> 페이지를 살펴봐주세요!</div>
+                                <div class="text-xs md:text-sm pt-1 opacity-50"> <span class="hidden md:inline">Yout Nearest</span> Developer Advocate 🥑 <br/> 저를 더 자세히 알고 싶으시다면 <br class="md:hidden inline" /> <nuxt-link to="/about" class="underline">About</nuxt-link> 페이지를 살펴봐주세요!</div>
                             </div>
                             <!-- <nuxt-link :to='`/category/${article.category}`' class="hover:underline text-base">{{article.category}}</nuxt-link>
                             <div>{{formatDate(article.datetime)}} · {{article.readingStats.text}}</div> -->
@@ -94,7 +93,7 @@ export default {
 
         const [prev, next] = await $content('articles')
         .only(['title', 'slug'])
-        .sortBy('createdAt', 'asc')
+        .sortBy('datetime', 'asc')
         .surround(params.slug)
         .fetch()
 

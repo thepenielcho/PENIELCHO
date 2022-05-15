@@ -3,7 +3,7 @@ title: Nuxt Content에서 Git 히스토리 기반으로 createdAt 날짜 고정�
 description: 배포 후 달라지는 createdAt 속성값, git history를 기준으로 고정시키는 법에 대해 알아보자.
 slug: createdat-based-on-git-history
 img: nuxt-content.png
-datetime: 2021. 11. 27.
+datetime: 2021-11-27
 category: Front-End
 featured: 'on'
 ---
