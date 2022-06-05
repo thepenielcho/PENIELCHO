@@ -123,7 +123,7 @@ export default {
       description: 'Your Nearest Developer Advocate 🥑',
       lang: 'ko',
       theme_color: '#ffffff',
-      background_color: '#ffffff',
+      background_color: '#65B867',
       display: 'standalone',
       start_url: '/',
       icons: []
