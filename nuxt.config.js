@@ -13,6 +13,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Your Nearest Developer Advocate 🥑' },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'apple-mobile-web-app-status-bar-style', content:'black-translucent'},
 
       {
         hid: 't-type',
@@ -113,9 +114,9 @@ export default {
       twitterSite: '@penielcho',
       twitterCreator: '@penielcho',
       twitterImage: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/OpenGraph.png',
-      appleStatusBarStyle: 'default',
+      appleStatusBarStyle: 'black-translucent',
       appleMobileWebAppCapable: 'yes',
-      appleMobileWebAppStatusBarStyle: 'default',
+      appleMobileWebAppStatusBarStyle: 'black-translucent',
     },
     manifest: {
       name: 'Peniel Cho',
