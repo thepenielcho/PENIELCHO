@@ -106,7 +106,7 @@ export default {
     meta: {
       name: 'Peniel Cho',
       description: 'Your Nearest Developer Advocate 🥑',
-      theme_color: '#65B867',
+      theme_color: '#F1F3F4',
       lang: 'ko',
       ogHost: 'https://penielcho.com',
       ogImage: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/OpenGraph.png',
@@ -123,8 +123,8 @@ export default {
       short_name: 'Peniel Cho',
       description: 'Your Nearest Developer Advocate 🥑',
       lang: 'ko',
-      theme_color: '#65B867',
-      background_color: '#65B867',
+      theme_color: '#F1F3F4',
+      background_color: '#F1F3F4',
       display: 'standalone',
       start_url: '/',
       icons: []
