@@ -113,9 +113,9 @@ export default {
       twitterSite: '@penielcho',
       twitterCreator: '@penielcho',
       twitterImage: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/OpenGraph.png',
-      appleStatusBarStyle: 'black-translucent',
+      appleStatusBarStyle: 'default',
       appleMobileWebAppCapable: 'yes',
-      appleMobileWebAppStatusBarStyle: 'black-translucent',
+      appleMobileWebAppStatusBarStyle: 'default',
     },
     manifest: {
       name: 'Peniel Cho',
