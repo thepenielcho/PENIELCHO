@@ -8,6 +8,13 @@ category: Front-End
 author: 조용주
 language: Korean
 featured: on
+tags:
+  - TailwindCSS
+  - Tailwind
+  - Install
+  - 설치
+  - Nuxtjs
+  - TypeError
 ---
 
 선 결론 후 설명 레츠고...

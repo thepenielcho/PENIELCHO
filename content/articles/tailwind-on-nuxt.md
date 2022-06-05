@@ -9,7 +9,12 @@ category: Front-End
 author: 조용주
 language: Korean
 featured: none
-
+tags:
+  - TailwindCSS
+  - Tailwind
+  - Install
+  - 설치
+  - Nuxtjs
 ---
 
 

@@ -9,7 +9,7 @@
             </div>
             </div>
             <div class="text-lg md:text-xl text-white font-medium text-center pt-1.5 md:pt-3"> 
-                <span class="opacity-75 pr-1">TIL, Tips, Essays, etc!</span> 📂
+                <span class="opacity-75 pr-1">Tech Articles like TIL, Tips, Essays, etc!</span> 📂
             </div>
         </div>
     </div>

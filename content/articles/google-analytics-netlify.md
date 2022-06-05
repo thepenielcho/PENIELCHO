@@ -8,6 +8,14 @@ category: Front-End
 author: 조용주
 language: Korean
 featured: none
+tags:
+  - Google
+  - GoogleAnalytics
+  - 분석
+  - 데이터
+  - 블로그
+  - Netlify
+  - 넷리파이
 ---
 
 이전에 Google Analytics 연결 시리즈로 적으려 했던 포스팅인데, 늦게나마 올려본다. 🥲

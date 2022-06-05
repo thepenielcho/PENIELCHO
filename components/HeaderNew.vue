@@ -8,15 +8,15 @@
                 <Menu class="h-6 w-6" />
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
-                <li>
+                <!-- <li>
                     <nuxt-link class="dropdown-item px-4 py-2 block w-full" to="/about">About</nuxt-link>
-                </li>
+                </li> -->
                 <li>
                     <nuxt-link class="dropdown-item px-4 py-2 block w-full" to="/articles">Articles</nuxt-link>
                 </li>
-                <li>
+                <!-- <li>
                     <nuxt-link class="dropdown-item px-4 py-2 block w-full" to="/projects">Projects</nuxt-link>
-                </li>
+                </li> -->
                 </ul>
             </div>
             </div>
@@ -27,9 +27,9 @@
         <img class="w-9 md:w-11" src="~/static/geek.png" alt="">
     </nuxt-link>
     <div class="items-center space-x-3 font-medium text-sm md:text-base hidden md:flex">
-        <div>
+        <!-- <div>
             <nuxt-link to="/about">About</nuxt-link>    
-        </div>
+        </div> -->
         <div class="justify-center">
             <div>
             <div class="dropdown relative">
@@ -50,9 +50,9 @@
             </div>
             </div>
         </div>
-        <div>
+        <!-- <div>
             <nuxt-link to="/projects">Projects</nuxt-link>
-        </div>
+        </div> -->
     </div>
 </div>
 

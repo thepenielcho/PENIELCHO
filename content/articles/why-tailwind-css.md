@@ -9,6 +9,10 @@ author: 조용주
 img: tailwind.jpeg
 language: Korean
 featured: none
+  - TailwindCSS
+  - Tailwind
+  - CSS
+  - CSSFramework
 
 ---
 

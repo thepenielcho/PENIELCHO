@@ -6,6 +6,12 @@ img: nuxt-content.png
 datetime: 2021-11-27
 category: Front-End
 featured: 'on'
+tags:
+  - Nuxtjs
+  - NuxtContent
+  - FrontEnd
+  - Git
+  - GitHistory
 ---
 
 

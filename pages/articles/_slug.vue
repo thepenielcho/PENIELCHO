@@ -4,20 +4,11 @@
     <div class="section-border py-16 md:py-24 googleyellow" >
         <div class="max-w-3xl mx-auto px-6">
             <div>
-                <!-- <div class="flex justify-center">
-                <div class="flex items-center">
-                    <div class="text-xl md:text-4xl font-semibold googletextblack text-center custom-text">{{article.title}}</div>
-                </div>
-                </div> -->
                 <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">{{article.category}} · {{formatDate(article.datetime)}}</div>
                 <div class="text-2xl md:text-4xl font-semibold googletextblack text-center custom-text article-title">{{article.title}}</div>
                 <div class="text-base md:text-lg googletextblack text-center mt-5 md:mt-6 mb-6 md:mb-8 opacity-50">{{article.description}}</div>
-                <!-- <div class="text-lg md:text-xl googletextblack font-medium text-center">
-                    <nuxt-link :to='`/category/${article.category}`' class="hover:underline text-base md:text-2xl text-center">{{article.category}}</nuxt-link>
-                </div> -->
                 <div class="flex justify-center">
                     <div class="flex itmes-center space-x-3 md:space-x-6">
-                        <!-- <img class="w-10 md:w-12 mr-2.5" src="~/static/geek.png" alt=""> -->
                         <div class="flex items-center">
                             <div class="lead-box w-16 h-16 md:w-20 md:h-20 profileborder">
                                 <img src="~/static/Peniel.jpg" class="profile" alt="">
@@ -29,14 +20,9 @@
                                 <div class="font-semibold text-lg md:text-xl">Peniel Cho</div>
                                 <div class="text-xs md:text-sm pt-1 opacity-50"> <span class="hidden md:inline">Yout Nearest</span> Developer Advocate 🥑 <br/> 저를 더 자세히 알고 싶으시다면 <br class="md:hidden inline" /> <nuxt-link to="/about" class="underline">About</nuxt-link> 페이지를 살펴봐주세요!</div>
                             </div>
-                            <!-- <nuxt-link :to='`/category/${article.category}`' class="hover:underline text-base">{{article.category}}</nuxt-link>
-                            <div>{{formatDate(article.datetime)}} · {{article.readingStats.text}}</div> -->
                         </div>
                     </div>
                 </div>
-                <!-- <div class="text-lg md:text-xl googletextblack font-medium text-center"> 
-                    <span class="opacity-50 pr-1">{{formatDate(article.datetime)}} · {{article.readingStats.text}} · by {{article.author}}</span>
-                </div> -->
             </div>
         </div> 
     </div>
@@ -56,26 +42,6 @@
 
     <div class="googlelightgrey py-14">
         <Prevnext class="max-w-4xl px-5 mx-auto" :prev="prev" :next="next" />
-        
-        <!-- <div class="flex px-5 space-x-4 pt-8 grid grid-cols-3">
-            <div class="group" v-for="article of featured" :key="article">
-                <nuxt-link :to="{path: `/articles/${article.slug}`}">
-                    <div class="block md:flex rounded-lg bg-white outline-item shadow-md">
-                        <div class="w-full md:w-1/2">
-                            <div class="hidden md:inline-block cardborder bg-img w-full h-40 md:h-full" :style="{ backgroundImage: `url(/${article.slug}/${article.img})` }"></div>
-                            <img class="block md:hidden cardborder bg-img profile min-h-content" :src="require(`~/static/${article.slug}/${article.img}`)" alt=""/>
-                        </div>
-                        <div class="px-6 py-6 w-full md:w-1/2 border-top left-border">
-                            <h5 class="googletextblack text-lg md:text-xl font-medium mb-2 keep-all">{{article.title}}</h5>
-                            <p class="googletextblack text-base mb-3 keep-all">
-                                {{article.description}}
-                            </p>
-                            <p class="googletextblack text-sm md:text-base">{{article.readingStats.text}}</p>
-                        </div>
-                    </div>
-                </nuxt-link>
-            </div>
-        </div> -->
 
     </div>
 
@@ -165,6 +131,33 @@ export default {
             ],
         }
     },
+
+    jsonld() {
+            return {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': `https://penielcho.com/articles/${this.$route.params.slug}`,
+            },
+            headline: this.article.title,
+            description: this.article.description,
+            image: `https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/${this.article.slug}/${this.article.img}`,
+            author: {
+                '@type': 'Person',
+                name: 'Peniel Cho',
+                email: 'mail@penielcho.com',
+                url: 'https://penielcho.com',
+                nationality: {
+                '@type': 'Country',
+                name: 'South Korea'
+                }
+            },
+            datePublished: this.article.datetime,
+            inLanguage: 'ko',
+            keywords: this.article.tags
+            }
+        },
 }
 </script>
 
