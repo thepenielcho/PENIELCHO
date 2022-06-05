@@ -99,5 +99,68 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  pwa: {
+    meta: {
+      name: 'Peniel Cho',
+      description: 'Your Nearest Developer Advocate 🥑',
+      theme_color: '#f5f5f5',
+      lang: 'ko',
+      ogHost: 'https://penielcho.com',
+      ogImage: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/OpenGraph.png',
+      twitterCard: 'summary_large_image',
+      twitterSite: '@penielcho',
+      twitterCreator: '@penielcho',
+      twitterImage: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/OpenGraph.png',
+      appleStatusBarStyle: 'black-translucent',
+      appleMobileWebAppCapable: 'yes',
+      appleMobileWebAppStatusBarStyle: 'black-translucent',
+    },
+    manifest: {
+      name: 'Peniel Cho',
+      short_name: 'Peniel Cho',
+      description: 'Your Nearest Developer Advocate 🥑',
+      lang: 'ko',
+      theme_color: '#ffffff',
+      background_color: '#ffffff',
+      display: 'standalone',
+      start_url: '/',
+      icons: []
+    },
+    workbox: {
+      offline: true,
+      runtimeCaching: [
+        {
+          urlPattern: "/*",
+          handler: "networkFirst",
+          method: "GET",
+        },
+        {
+          urlPattern: 'https://fonts.googleapis.com/.*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: {
+            cacheName: 'google-fonts-webfonts',
+            cacheExpiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 365,
+            },
+          },
+        },
+        {
+          urlPattern: 'https://fonts.gstatic.com/.*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: {
+            cacheName: 'google-fonts-webfonts',
+            cacheExpiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 365,
+            },
+          },
+        },
+      ]
+    },
   }
 }
