@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <AboutSection />
+  </div>
 </template>
 
 <script>
