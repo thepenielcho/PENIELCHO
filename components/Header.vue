@@ -14,6 +14,9 @@
                 <li>
                     <nuxt-link class="dropdown-item px-4 py-2 block w-full" to="/articles">Tech Articles</nuxt-link>
                 </li>
+                <li>
+                    <nuxt-link class="dropdown-item px-4 py-2 block w-full" to="/notes">Non-Tech Articles</nuxt-link>
+                </li>
                 <!-- <li>
                     <nuxt-link class="dropdown-item px-4 py-2 block w-full" to="/projects">Projects</nuxt-link>
                 </li> -->
