@@ -5,17 +5,17 @@
             <div class="flex justify-center">
             <div class="flex items-center">
                 <!-- <img class="w-11 md:w-14 mr-2.5" src="~/static/geek.png" alt=""> -->
-                <div class="text-3xl md:text-5xl font-semibold text-white text-center">✍️ Articles</div>
+                <div class="text-3xl md:text-5xl font-medium googletextblack text-center">🦾 Tech Articles</div>
             </div>
             </div>
-            <div class="text-lg md:text-xl text-white font-medium text-center pt-1.5 md:pt-3"> 
+            <div class="text-lg md:text-xl googletextblack text-center pt-1.5 md:pt-3"> 
                 <span class="opacity-75 pr-1">Tech Articles like TIL, Tips, Essays, etc!</span> 📂
             </div>
         </div>
     </div>
     <div class="w-full googleyellow">
         <div class="pt-10 md:pt-16 max-w-3xl mx-auto">
-        <Search class="px-6 md:px-3" />
+        <TechSearch class="px-6 md:px-3" />
         </div>
     </div>    
 </div>

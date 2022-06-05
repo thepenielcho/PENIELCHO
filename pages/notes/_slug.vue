@@ -1,10 +1,10 @@
 <template>
     <div class="related">
 
-    <div class="section-border py-16 md:py-24 googleyellow" >
+    <div class="section-border py-16 md:py-24 googlegreen" >
         <div class="max-w-3xl mx-auto px-6">
             <div>
-                <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">{{article.category}} · {{formatDate(article.datetime)}}</div>
+                <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">{{article.tags[0]}}</div>
                 <div class="text-2xl md:text-4xl font-semibold googletextblack text-center custom-text article-title">{{article.title}}</div>
                 <div class="text-base md:text-lg googletextblack text-center mt-5 md:mt-6 mb-6 md:mb-8 opacity-50">{{article.description}}</div>
                 <div class="flex justify-center">
@@ -41,7 +41,7 @@
     </div>
 
     <div class="googlelightgrey py-14">
-        <Prevnext class="max-w-4xl px-5 mx-auto" :prev="prev" :next="next" />
+        <NotePrevNext class="max-w-4xl px-5 mx-auto" :prev="prev" :next="next" />
 
     </div>
 
@@ -54,22 +54,16 @@
 <script>
 export default {
     async asyncData({ $content, params }) {
-        const article = await $content('articles', params.slug)
+        const article = await $content('notes', params.slug)
         .fetch();
 
-        const [prev, next] = await $content('articles')
+        const [prev, next] = await $content('notes')
         .only(['title', 'slug'])
-        .sortBy('datetime', 'asc')
+        .sortBy('createdAt', 'asc')
         .surround(params.slug)
         .fetch()
 
-        const featured = await $content('articles')
-        .where({featured: 'on'})
-        .sortBy('datetime', 'desc')
-        .limit(3)
-        .fetch();
-
-        return { article, prev, next, featured }
+        return { article, prev, next }
     },
     methods: {
         formatDate(date) {
@@ -126,7 +120,7 @@ export default {
             {
             hid: 'og:url',
             name: 'og:url',
-            content: `https://penielcho.com/articles/${this.$route.params.slug}`
+            content: `https://penielcho.com/notes/${this.$route.params.slug}`
             },
             ],
         }
@@ -138,7 +132,7 @@ export default {
             '@type': 'BlogPosting',
             mainEntityOfPage: {
                 '@type': 'WebPage',
-                '@id': `https://penielcho.com/articles/${this.$route.params.slug}`,
+                '@id': `https://penielcho.com/notes/${this.$route.params.slug}`,
             },
             headline: this.article.title,
             description: this.article.description,

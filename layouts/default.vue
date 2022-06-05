@@ -1,7 +1,7 @@
 <template>
   <div>
     <Warning />
-    <HeaderNew />
+    <Header />
     <Nuxt />
     <Footer />
     
