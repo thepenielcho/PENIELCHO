@@ -105,12 +105,12 @@ export default {
             hid: 'og:image',
             property: 'og:image',
             // content: this.article.img
-            content: `https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/${this.article.slug}/${this.article.img}`
+            content: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/non-tech-article.png'
             },
             {
             hid: 'og:image:secure_url',
             property: 'og:image:secure_url',
-            content: `https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/${this.article.slug}/${this.article.img}`
+            content: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/non-tech-article.png'
             },
             {
             hid: 'og:image:alt',
@@ -136,7 +136,7 @@ export default {
             },
             headline: this.article.title,
             description: this.article.description,
-            image: `https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/${this.article.slug}/${this.article.img}`,
+            image: 'https://raw.githubusercontent.com/thepenielcho/PENIELCHO/main/static/non-tech-article.png',
             author: {
                 '@type': 'Person',
                 name: 'Peniel Cho',
