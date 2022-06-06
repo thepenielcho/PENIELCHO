@@ -4,7 +4,7 @@
         <div class="flex justify-start">
             <div>
             <div class="dropdown relative font-medium">
-                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="#" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                 <Menu class="h-6 w-6" />
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
@@ -36,7 +36,7 @@
         <div class="justify-center">
             <div>
             <div class="dropdown relative">
-                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="#" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                 Tech Articles <Down />
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
@@ -56,7 +56,7 @@
         <div class="justify-center">
             <div>
             <div class="dropdown relative">
-                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="#" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="dropdown-toggle flex items-center whitespace-nowrap" href="" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                 Non-Tech Articles <Down />
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
