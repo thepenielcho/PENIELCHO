@@ -39,11 +39,11 @@
                 <infinite-loading class=" pt-6" @infinite="infiniteHandler" spinner="spiral">
                                 <div slot="no-more" class="mx-auto">
                                 <div class="googletextblack font-medium text-lg md:text-xl md:pb-2 pb-3">You've Reached the End of My Blog! </div>
-                                <div class="text-zinc-500 font-medium text-base md:text-lg"> Subscribe for New Articles <a class="underline" href="https://cosadama.com/recruit">Here</a> </div>
+                                <div class="text-zinc-500 font-medium text-base md:text-lg"> Subscribe for New Articles <a class="underline" href="#">Here</a> </div>
                                 </div>
                                 <div slot="no-results" class="">
                                 <div class="text-gray-600 font-medium text-base md:text-lg md:pb-2.5 pb-4">There's no matching results for your request 😭</div>
-                                <div class="text-gray-600 font-medium text-sm md:text-base">You can email me about this via <a href="https://cosadama.com/recruit" class="underline">this link</a> </div>
+                                <div class="text-gray-600 font-medium text-sm md:text-base">You can email me about this via <a href="mailto:mail@penielcho.com" class="underline">this link</a> </div>
                                 </div>
                                 <div slot="error" slot-scope="{ trigger }" class="text-gray-600 font-medium text-base md:text-lg">
                                 뭔가 문제가 있나봐요.
