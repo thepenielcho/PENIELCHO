@@ -29,7 +29,15 @@
 
 
     <div class="googlelightgrey section-border">
-        <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 py-16 mx-auto fadeinupcom"/>
+        <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 pt-10 md:pt-16 pb-4 md:pb-6 mx-auto fadeinupcom"/>
+        <div class="px-6 space-x-2 mx-auto max-w-4xl text-center pb-10 md:pb-16">
+            <div v-for="tag of article.tags" :key="tag" class="inline">
+                <span class="text-zinc-700 px-3 md:px-4 py-2 md:py-2.5 bg-white point-border rounded-2xl inline-block mt-3 text-sm md:text-base">
+                    {{tag}}
+                </span>
+            </div>
+        </div>
+
     </div>
 
     <div class="bg-white section-border pt-8 pb-6">
@@ -207,6 +215,15 @@ img{
 }
 .all-border {
     border-width: 2px;
+    border-color: rgba(17, 24, 39)
+}
+.point-border {
+    border-width: 1.75px;
+    border-color: rgba(17, 24, 39)
+}
+.point-border:hover {
+    background-color: #F1F3F4;
+    border-width: 1.75px;
     border-color: rgba(17, 24, 39)
 }
 </style>
