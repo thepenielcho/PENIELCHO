@@ -8,7 +8,7 @@
 
         <ul v-if="articles.length" class="bg-white shadow-sm md:shadow rounded-lg bordergoogleblack px-4">
           <li class="googletextblack py-2.5 md:py-3.5 border-b text-sm md:text-base lastborder" v-for="article of articles" :key="article.slug">
-            <nuxt-link :to='`/articles/${article.slug}`' class="px-2">{{ article.title }}</nuxt-link>
+            <nuxt-link :to='`/notes/${article.slug}`' class="px-2">{{ article.title }}</nuxt-link>
           </li>
         </ul>
       </div>
