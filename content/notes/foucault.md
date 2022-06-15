@@ -1,6 +1,6 @@
 ---
 title: '푸코와 권력'
-description: 푸코의 권력 개념들을 살펴보며 권력이 개인, 더 나아가 사회적 개인에게 어떤 영향을 끼치는지 알아보자.
+description: 푸코의 권력 개념을 통해 권력이 개인, 더 나아가 사회적 개인에게 어떤 영향을 끼치는지 알아보자.
 slug: foucault
 tags:
 - 푸코
@@ -49,3 +49,9 @@ tags:
 
 
 이 가운데 생명권력이 가장 잘 드러나는 것은 당연히 아이를 출산하지 않는 부부일 것이다. 국가 자체가 정치경제학적 관점에서 노동자와 국민의 재생산을 위해 출산, 즉 개인의 생식행동을 관리하고자 하는 것이다.
+
+> 푸코에 대한 더 자세한 이야기들은 아래에 적어두었으니 참고하면 좋다.
+> - [푸코: 억압과 통제, 그리고 자유](https://university.penielcho.com/articles/michel-foucault-1/)
+> - [푸코: 권력과 주체](https://university.penielcho.com/articles/michel-foucault-2/)
+> - [푸코: 담론과 지식의 고고학](https://university.penielcho.com/articles/michel-foucault-3/)
+> - [푸코: 규율권력의 계보학](https://university.penielcho.com/articles/michel-foucault-4/)

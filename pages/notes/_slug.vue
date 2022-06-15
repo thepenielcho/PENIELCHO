@@ -29,7 +29,7 @@
 
 
     <div class="googlelightgrey section-border">
-        <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 pt-10 md:pt-16 pb-4 md:pb-6 mx-auto fadeinupcom"/>
+        <nuxt-content :document="article" class="prose prose-quoteless max-w-4xl custom-text px-6 pt-10 md:pt-16 pb-4 md:pb-6 mx-auto fadeinupcom"/>
         <div class="px-6 space-x-2 mx-auto max-w-4xl text-center pb-10 md:pb-16">
             <div v-for="tag of article.tags" :key="tag" class="inline">
                 <span class="text-zinc-700 px-3 md:px-4 py-2 md:py-2.5 bg-white point-border rounded-2xl inline-block mt-3 text-sm md:text-base">
