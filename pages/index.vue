@@ -5,7 +5,8 @@
 
   <!-- <AAP /> -->
 
-  <MainArticle />
+  <!-- <MainArticle /> -->
+  <MainNav />
 
   <Self />
 

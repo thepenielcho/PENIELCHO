@@ -5,11 +5,11 @@
             <div class="flex justify-center">
             <div class="flex items-center">
                 <img class="w-11 md:w-14 mr-2.5" src="~/static/geek.png" alt="">
-                <div class="text-3xl md:text-5xl font-medium text-white text-center">Peniel Cho</div>
+                <div class="text-3xl md:text-5xl font-medium googletextblack text-center">Peniel Cho</div>
             </div>
             </div>
-            <div class="text-lg md:text-xl text-white text-center pt-1.5 md:pt-3"> 
-                <span class="opacity-50 pr-1">Your Nearest Developer Advocate</span> 🥑
+            <div class="text-lg md:text-xl googletextblack text-center pt-1.5 md:pt-3"> 
+                <span class="opacity-75 pr-1">Your Nearest Developer Advocate</span> 🥑
             </div>
         </div>
     </div>

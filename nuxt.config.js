@@ -88,6 +88,9 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
+    '@nuxt/image',
+    // 나중에 시간 되면 img 태그들 nuxt-img나 nuxt-picture로 교체하자!
+    // https://image.nuxtjs.org/getting-started/installation
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
