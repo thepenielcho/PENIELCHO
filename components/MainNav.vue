@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="max-w-3xl mx-auto px-5 googletextblack font-medium text-3xl pt-16 pb-8">
+        <div class="max-w-3xl mx-auto px-6 googletextblack font-medium text-2xl md:text-3xl pt-8 md:pt-12 pb-6 md:pb-8">
             Pages
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto gap-4 px-6 pb-24 text-lg md:text-xl font-medium googletextblack">

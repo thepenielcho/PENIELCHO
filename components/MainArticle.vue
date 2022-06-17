@@ -1,12 +1,12 @@
 <template>
 <div class="w-full googlelightgrey section-outline">
-    <div class="pb-6 pt-10 md:pb-10 md:pt-16 max-w-3xl mx-auto px-4 md:px-3 fadeinupcom">
-            <div class="full-border py-2 md:py-3 rounded-lg bg-amber-100 googletextblack font-medium text-base md:text-xl flex items-center justify-center space-x-2 md:space-x-4">
+    <div class="pb-6 pt-8 md:pb-10 md:pt-12 max-w-3xl mx-auto px-4 md:px-3 fadeinupcom">
+            <!-- <div class="full-border py-2 md:py-3 rounded-lg bg-amber-100 googletextblack font-medium text-base md:text-xl flex items-center justify-center space-x-2 md:space-x-4">
                 <div class=""> <Rss class="w-5 md:w-6 mr-1 md:mr-2 inline" /> Subscribe <span class="hidden md:inline">New Articles</span> via RSS!</div>
                 <div class="transition duration-100 rounded-lg font-semibold px-1.5 py-1 text-xs md:text-sm full-border bg-white hover:bg-amber-300 rss-btn">RSS Feed</div>
-            </div>
+            </div> -->
 
-            <div class="px-3 py-10 space-y-5">
+            <div class="px-3 pb-10 pt-5 space-y-5">
 
                 <div class="group fadeinupcom" v-for="article of articles" :key="article">
                     <nuxt-link :to="{path: `/articles/${article.slug}`}">
@@ -15,24 +15,24 @@
                                 <div class="hidden md:inline-block cardborder bg-img w-full h-40 md:h-full" :style="{ backgroundImage: `url(/${article.slug}/${article.img})` }"></div>
                                 <img class="block md:hidden cardborder bg-img profile min-h-content" :src="require(`~/static/${article.slug}/${article.img}`)" alt=""/>
                             </div>
-                            <div class="px-6 py-6 w-full md:w-1/2 border-top left-border">
-                                <h5 class="googletextblack text-lg md:text-xl font-medium mb-2 keep-all">{{article.title}}</h5>
-                                <p class="googletextblack text-base mb-3 keep-all">
+                            <div class="p-5 md:p-6 w-full md:w-1/2 border-top left-border">
+                                <h5 class="googletextblack text-base md:text-lg font-medium mb-1 md:mb-2 keep-all">{{article.title}}</h5>
+                                <p class="googletextblack text-sm md:text-base mb-1.5 md:mb-2.5 keep-all">
                                     {{article.description}}
                                 </p>
-                                <p class="googletextblack text-sm md:text-base">{{article.readingStats.text}} <span class="pl-2 hidden group-hover:inline transition duration-100">Read More</span> </p>
+                                <p class="googletextblack text-xs md:text-sm">{{article.readingStats.text}} <span class="pl-2 hidden group-hover:inline transition duration-100">Read More</span> </p>
                             </div>
                         </div>
                     </nuxt-link>
                 </div>
-
+                
                 <infinite-loading class=" pt-6" @infinite="infiniteHandler" spinner="spiral">
                                 <div slot="no-more" class="mx-auto">
-                                <div class="googletextblack font-medium text-lg md:text-xl md:pb-2 pb-3">You've Reached the End of My Blog! </div>
+                                <div class="googletextblack font-medium text-lg md:text-xl pb-1 pb:pb-2">You've Reached the End of My Blog! </div>
                                 <div class="text-zinc-500 font-medium text-base md:text-lg"> Subscribe for New Articles <a class="underline" href="#">Here</a> </div>
                                 </div>
                                 <div slot="no-results" class="">
-                                <div class="text-gray-600 font-medium text-base md:text-lg md:pb-2.5 pb-4">There's no matching results for your request 😭</div>
+                                <div class="text-gray-600 font-medium text-base md:text-lg pb-1 pb:pb-2">There's no matching results for your request 😭</div>
                                 <div class="text-gray-600 font-medium text-sm md:text-base">You can email me about this via <a href="mailto:mail@penielcho.com" class="underline">this link</a> </div>
                                 </div>
                                 <div slot="error" slot-scope="{ trigger }" class="text-gray-600 font-medium text-base md:text-lg">
