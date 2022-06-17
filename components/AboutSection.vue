@@ -1,18 +1,19 @@
 <template>
-<div class="googlegreen section-border py-24 md:py-44">
-    <div class="items-center justify-center">
+<div class="googlegreen">
+    <div class="items-center justify-center py-24 md:py-40">
         <div>
             <div class="flex justify-center">
             <div class="flex items-center">
                 <!-- <img class="w-11 md:w-14 mr-2.5" src="~/static/geek.png" alt=""> -->
-                <div class="text-3xl md:text-5xl font-semibold text-white text-center">🏗 Working on it! 🚧</div>
+                <div class="text-3xl md:text-4xl font-medium googletextblack text-center">🏗 Working on it! 🚧</div>
             </div>
             </div>
-            <div class="text-lg md:text-xl text-white font-medium text-center pt-1.5 md:pt-3"> 
+            <div class="text-base md:text-lg googletextblack text-center pt-1 md:pt-2"> 
                 <span class="opacity-75 pr-1">Soon will be updated</span> 😎
             </div>
         </div>
-    </div>  
+    </div>
+    <Self />  
 </div>
 </template>
 
