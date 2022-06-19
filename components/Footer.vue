@@ -9,26 +9,26 @@
                     <div>
                         <div class="text-base md:text-lg font-medium">Sitemap</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
-                            <nuxt-link to="/about" class="block">About</nuxt-link>
-                            <nuxt-link to="/articles" class="block">Tech Articles</nuxt-link>
-                            <nuxt-link to="/notes" class="block">Non-Tech Articles</nuxt-link>
+                            <nuxt-link to="/about" class="block hover:underline">About</nuxt-link>
+                            <nuxt-link to="/articles" class="block hover:underline">Tech Articles</nuxt-link>
+                            <nuxt-link to="/notes" class="block hover:underline">Non-Tech Articles</nuxt-link>
                         </ul>
                     </div>
                     <div>
                         <div class="text-base md:text-lg font-medium">Socials</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
-                            <a class="block" href="https://www.linkedin.com/in/peniel-cho">Linkedin</a>
-                            <a class="block" href="https://github.com/thepenielcho">GitHub</a>
-                            <a class="block" href="https://twitter.com/penielcho">Twitter</a>
-                            <a class="block" href="https://www.facebook.com/thepenielcho">Facebook</a>
+                            <a class="block hover:underline" href="https://www.linkedin.com/in/peniel-cho">Linkedin</a>
+                            <a class="block hover:underline" href="https://github.com/thepenielcho">GitHub</a>
+                            <a class="block hover:underline" href="https://twitter.com/penielcho">Twitter</a>
+                            <a class="block hover:underline" href="https://www.facebook.com/thepenielcho">Facebook</a>
                         </ul>
                     </div>
                     <div>
                         <div class="text-base md:text-lg font-medium">Contact</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
-                            <a class="block" href="mailto:mail@penielcho.com">Email (for Work)</a>
-                            <a class="block" href="mailto:penielcho98@gmail.com">Email (Personal)</a>
-                            <a class="block" href="https://www.linkedin.com/in/peniel-cho">Linkedin</a>
+                            <a class="block hover:underline" href="mailto:mail@penielcho.com">Email (for Work)</a>
+                            <a class="block hover:underline" href="mailto:penielcho98@gmail.com">Email (Personal)</a>
+                            <a class="block hover:underline" href="https://www.linkedin.com/in/peniel-cho">Linkedin</a>
                         </ul>
                     </div>
                 </div>

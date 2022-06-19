@@ -3,7 +3,7 @@
         <div class="max-w-3xl mx-auto px-6 googletextblack font-medium text-2xl md:text-3xl pt-8 md:pt-12 pb-6 md:pb-8">
             Pages
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto gap-4 px-6 pb-24 text-lg md:text-xl font-medium googletextblack">
+        <div class="fadeinupcom0 grid grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto gap-4 px-6 pb-24 text-lg md:text-xl font-medium googletextblack">
             <nuxt-link to="/articles" class="c c1 h-36 md:h-40 rounded-xl flex items-center justify-center ">
                 <div>
                     <div class="text-center pb-0.5">Tech Articles</div>  
@@ -78,5 +78,21 @@ export default {
     transition-duration: 150ms;
     border-width: 2px;
     border-color: rgba(17, 24, 39)
+}
+.fadeinupcom0 {
+  animation: fadeinup0 0.55s ease-out forwards;
+}
+
+@keyframes fadeinup0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
 }
 </style>
