@@ -62,11 +62,13 @@
 <script>
 export default {
     async asyncData({ $content, params }) {
-        const article = await $content('notes', params.slug)
+        const article = await $content('articles', params.slug)
+        .where({route: "notes"})
         .fetch();
 
-        const [prev, next] = await $content('notes')
+        const [prev, next] = await $content('articles')
         .only(['title', 'slug'])
+        .where({route: "notes"})
         .sortBy('createdAt', 'asc')
         .surround(params.slug)
         .fetch()

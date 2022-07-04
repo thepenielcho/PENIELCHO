@@ -17,6 +17,7 @@ tags:
   - Git
   - GitHub
   - GitHubPages
+route: articles
 ---
 
 글에 들어가기에 앞서, Google Analytics 트랙킹 ID 발급받는 법을 모른다면 [관련 포스팅](https://www.blog.cosadama.com/google-analytics-tracking-id)을 먼저 읽어주시길 바란다. 또한 본 포스팅은 Nuxt 프레임워크로 개발된 정적 웹사이트를 기준으로 한다.

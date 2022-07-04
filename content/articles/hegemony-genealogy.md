@@ -11,6 +11,7 @@ tags:
 - 영국
 - 미국
 - 아리기
+route: notes
 ---
 
 ![Hegemony Genealogy](/hegemony-genealogy/hegemony-transparent.png)

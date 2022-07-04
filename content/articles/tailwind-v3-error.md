@@ -15,6 +15,7 @@ tags:
   - 설치
   - Nuxtjs
   - TypeError
+route: articles
 ---
 
 선 결론 후 설명 레츠고...
