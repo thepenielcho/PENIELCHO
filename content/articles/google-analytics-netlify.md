@@ -16,6 +16,7 @@ tags:
   - 블로그
   - Netlify
   - 넷리파이
+route: articles
 ---
 
 이전에 Google Analytics 연결 시리즈로 적으려 했던 포스팅인데, 늦게나마 올려본다. 🥲

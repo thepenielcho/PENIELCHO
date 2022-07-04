@@ -12,6 +12,7 @@ tags:
   - FrontEnd
   - Git
   - GitHistory
+route: articles
 ---
 
 

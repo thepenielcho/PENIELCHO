@@ -62,21 +62,17 @@
 export default {
     async asyncData({ $content, params }) {
         const article = await $content('articles', params.slug)
+        .where({route: "articles"})
         .fetch();
 
         const [prev, next] = await $content('articles')
+        .where({route: "articles"})
         .only(['title', 'slug'])
         .sortBy('datetime', 'asc')
         .surround(params.slug)
         .fetch()
 
-        const featured = await $content('articles')
-        .where({featured: 'on'})
-        .sortBy('datetime', 'desc')
-        .limit(3)
-        .fetch();
-
-        return { article, prev, next, featured }
+        return { article, prev, next }
     },
     methods: {
         formatDate(date) {

@@ -15,6 +15,7 @@ tags:
   - Install
   - 설치
   - Nuxtjs
+route: articles
 ---
 
 

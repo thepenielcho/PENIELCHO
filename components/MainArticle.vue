@@ -11,9 +11,20 @@
                 <div class="group fadeinupcom" v-for="article of articles" :key="article">
                     <nuxt-link :to="{path: `/articles/${article.slug}`}">
                         <div class="block md:flex rounded-lg bg-white border-item shadow-md group">
+
                             <div class="w-full md:w-1/2">
-                                <div class="hidden md:inline-block cardborder bg-img w-full h-40 md:h-full" :style="{ backgroundImage: `url(/${article.slug}/${article.img})` }"></div>
-                                <img class="block md:hidden cardborder bg-img profile min-h-content" :src="require(`~/static/${article.slug}/${article.img}`)" alt=""/>
+                                <div class="hidden md:inline-block cardborder bg-img w-full h-40 md:h-full">
+                                    <div v-if="`${article.img}` == undefined || `${article.img}` == null || `${article.img}` == 'null' || `${article.img}` == 'undefined'" class="cardborder inline-block bg-img w-full h-40 md:h-full" 
+                                    :style="{ backgroundImage: 'url(/tech-article.png)' }" alt=""></div>
+                                    <div v-else class="cardborder bg-img w-full h-40 md:h-full" 
+                                    :style="{ backgroundImage: `url(/${article.slug}/${article.img})` }" alt=""></div>
+                                </div>
+                                <div class="block md:hidden">
+                                    <img v-if="`${article.img}` == undefined || `${article.img}` == null || `${article.img}` == 'null' || `${article.img}` == 'undefined'" class="inline-block cardborder bg-img profile min-h-content" 
+                                    src="~/static/tech-article.png" alt="">
+                                    <img v-else class="cardborder bg-img profile min-h-content" 
+                                    :src="require(`~/static/${article.slug}/${article.img}`)" alt="">
+                                </div>
                             </div>
                             <div class="p-5 md:p-6 w-full md:w-1/2 border-top left-border">
                                 <h5 class="googletextblack text-base md:text-lg font-medium mb-1 md:mb-2 keep-all">{{article.title}}</h5>
@@ -68,6 +79,7 @@ methods: {
     },
     fetchData() {
         return this.$content("articles")
+        .where({route: "articles"})
         .limit(this.limit)
         .skip(this.limit * this.page)
         .sortBy('datetime', 'desc')

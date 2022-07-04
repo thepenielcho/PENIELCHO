@@ -77,7 +77,8 @@ methods: {
     return new Date(date).toLocaleDateString('ko', options)
     },
     fetchData() {
-        return this.$content("notes")
+        return this.$content("articles")
+        .where({route: "notes"})
         .limit(this.limit)
         .skip(this.limit * this.page)
         .sortBy('createdAt', 'desc')
