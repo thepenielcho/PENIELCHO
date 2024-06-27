@@ -1,14 +1,10 @@
 <template>
 <div class="w-full overflow-hidden">
 
-  <NameSection />
+  <componentArticleHero />
+  <componentArticleList />
 
-  <!-- <AAP /> -->
-
-  <!-- <MainArticle /> -->
-  <MainNav />
-
-  <Self />
+  <!-- <componentMarquee /> -->
 
 </div>
 </template>

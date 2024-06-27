@@ -1,9 +1,8 @@
 <template>
   <div>
-    <!-- <Warning /> -->
-    <Header />
+    <componentHeader />
     <Nuxt />
-    <Footer />
+    <componentFooter />
     
   </div>
 </template>

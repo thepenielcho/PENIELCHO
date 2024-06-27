@@ -18,7 +18,7 @@
                         <div class="flex items-center">
                             <div>
                                 <div class="font-medium text-lg md:text-xl">Peniel Cho</div>
-                                <div class="text-xs md:text-sm pt-1 opacity-50"> <span class="hidden md:inline">Yout Nearest</span> Developer Advocate 🥑 <br/> 저를 더 자세히 알고 싶으시다면 <br class="md:hidden inline" /> <nuxt-link to="/about" class="underline">About</nuxt-link> 페이지를 살펴봐주세요!</div>
+                                <div class="text-xs md:text-sm pt-1 opacity-50"> 2년만에 블로깅 다시 시작 </div>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
         <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 pt-10 md:pt-16 pb-4 md:pb-6 mx-auto fadeinupcom"/>
         <div class="px-6 space-x-2 mx-auto max-w-4xl text-center pb-10 md:pb-16">
             <div v-for="tag of article.tags" :key="tag" class="inline">
-                <span class="text-zinc-700 px-3 md:px-4 py-2 md:py-2.5 bg-white point-border rounded-2xl inline-block mt-3 text-sm md:text-base">
+                <span class="text-zinc-700 px-3 md:px-4 py-2 md:py-2.5 bg-white point-border rounded-full inline-block mt-3 text-sm md:text-base">
                     {{tag}}
                 </span>
             </div>
@@ -44,11 +44,11 @@
             <div class="text-2xl font-medium pb-1.5">Comments 💬</div>
             <div class="text-base opacity-75">Please leave some comments here 🙌🏻 Questions, Suggestions, Cheers, Whatever!</div>
         </div>
-        <Comments class="px-6 max-w-4xl mx-auto" />
+        <componentComments class="px-6 max-w-4xl mx-auto" />
     </div>
 
     <div class="googlelightgrey py-14">
-        <Prevnext class="max-w-4xl px-5 mx-auto" :prev="prev" :next="next" />
+        <componentPrevNext class="max-w-4xl px-5 mx-auto" :prev="prev" :next="next" />
 
     </div>
 
@@ -168,10 +168,14 @@ export default {
 pre {
     background-color: #FFF !important;
     border-width: 2px;
-    border-color: rgba(17, 24, 39)
+    border-color: rgba(17, 24, 39);
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace !important;
 }
 .custom-text{
     word-break: keep-all;
+}
+pre, code, pre *, code * {
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace !important;
 }
 code::before {
     content: none !important;
@@ -219,12 +223,12 @@ img{
     border-color: rgba(17, 24, 39)
 }
 .point-border {
-    border-width: 1.75px;
+    border-width: 1.9px;
     border-color: rgba(17, 24, 39)
 }
 .point-border:hover {
     background-color: #F1F3F4;
-    border-width: 1.75px;
+    border-width: 1.9px;
     border-color: rgba(17, 24, 39)
 }
 </style>

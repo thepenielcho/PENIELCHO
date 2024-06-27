@@ -1,21 +1,17 @@
 <template>
-<div class="googlelightgrey pt-16 md:pt-20">
+<div class="googleyellow section-border py-16 md:py-24">
     <div class="items-center justify-center">
         <div>
             <div class="flex justify-center">
             <div class="flex items-center">
-                <img class="w-8 md:w-10 mr-2.5" src="~/static/geek.png" alt="">
-                <div class="text-3xl md:text-4xl font-medium googletextblack text-center">Peniel Cho</div>
+                <div class="text-2xl md:text-4xl font-medium googletextblack text-center">allArticles</div>
             </div>
-            </div>
-            <div class="text-base md:text-lg googletextblack text-center pt-1 md:pt-2"> 
-                <span class="opacity-75 pr-1">Your Nearest Developer Advocate</span> 🥑
             </div>
         </div>
     </div>
-    <div class="w-full googlelightgrey">
+    <div class="w-full googleyellow">
         <div class="pt-8 md:pt-12 max-w-3xl mx-auto">
-        <TechSearch class="px-6 md:px-3" />
+        <componentSearch class="px-6 md:px-3" />
         </div>
     </div>    
 </div>
@@ -23,7 +19,6 @@
 
 <script>
 export default {
-
 }
 </script>
 

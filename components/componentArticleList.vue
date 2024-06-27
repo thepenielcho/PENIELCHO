@@ -1,26 +1,23 @@
 <template>
 <div class="w-full googlelightgrey section-outline">
     <div class="pb-6 pt-8 md:pb-10 md:pt-12 max-w-3xl mx-auto px-4 md:px-3 fadeinupcom">
-            <!-- <div class="full-border py-2 md:py-3 rounded-lg bg-amber-100 googletextblack font-medium text-base md:text-xl flex items-center justify-center space-x-2 md:space-x-4">
-                <div class=""> <Rss class="w-5 md:w-6 mr-1 md:mr-2 inline" /> Subscribe <span class="hidden md:inline">New Articles</span> via RSS!</div>
-                <div class="transition duration-100 rounded-lg font-semibold px-1.5 py-1 text-xs md:text-sm full-border bg-white hover:bg-amber-300 rss-btn">RSS Feed</div>
-            </div> -->
 
             <div class="px-3 pb-10 pt-5 space-y-5">
 
                 <div class="group fadeinupcom" v-for="article of articles" :key="article">
-                    <nuxt-link :to="{path: `/notes/${article.slug}`}">
+                    <nuxt-link :to="{path: `/articles/${article.slug}`}">
                         <div class="block md:flex rounded-lg bg-white border-item shadow-md group">
+
                             <div class="w-full md:w-1/2">
                                 <div class="hidden md:inline-block cardborder bg-img w-full h-40 md:h-full">
                                     <div v-if="`${article.img}` == undefined || `${article.img}` == null || `${article.img}` == 'null' || `${article.img}` == 'undefined'" class="cardborder inline-block bg-img w-full h-40 md:h-full" 
-                                    :style="{ backgroundImage: 'url(/non-tech-article.png)' }" alt=""></div>
+                                    :style="{ backgroundImage: 'url(/tech-article.png)' }" alt=""></div>
                                     <div v-else class="cardborder bg-img w-full h-40 md:h-full" 
                                     :style="{ backgroundImage: `url(/${article.slug}/${article.img})` }" alt=""></div>
                                 </div>
                                 <div class="block md:hidden">
                                     <img v-if="`${article.img}` == undefined || `${article.img}` == null || `${article.img}` == 'null' || `${article.img}` == 'undefined'" class="inline-block cardborder bg-img profile min-h-content" 
-                                    src="~/static/non-tech-article.png" alt="">
+                                    src="~/static/tech-article.png" alt="">
                                     <img v-else class="cardborder bg-img profile min-h-content" 
                                     :src="require(`~/static/${article.slug}/${article.img}`)" alt="">
                                 </div>
@@ -30,20 +27,20 @@
                                 <p class="googletextblack text-sm md:text-base mb-1.5 md:mb-2.5 keep-all">
                                     {{article.description}}
                                 </p>
-                                <p class="googletextblack text-xs md:text-sm">{{article.readingStats.text}} <span class="pl-2 hidden group-hover:inline transition duration-100">Read More</span> </p>
+                                <p class="googletextblack text-xs md:text-sm">{{formatDate(article.datetime)}} · {{article.readingStats.text}} <span class="pl-1 hidden group-hover:inline transition duration-100 googletextblack">Read More</span> </p>
                             </div>
                         </div>
                     </nuxt-link>
                 </div>
-
+                
                 <infinite-loading class=" pt-6" @infinite="infiniteHandler" spinner="spiral">
                                 <div slot="no-more" class="mx-auto">
-                                <div class="googletextblack font-medium text-lg md:text-xl pb-1 pb:pb-2">You've Reached the End of My Blog! </div>
-                                <div class="text-zinc-500 font-medium text-base md:text-lg"> Subscribe for New Articles <a class="underline" href="#">Here</a> </div>
+                                <div class="googletextblack font-medium text-lg md:text-xl pb-1 pb:pb-2"> 더 쓴 글이 없어요. </div>
+                                <div class="text-zinc-500 font-medium text-sm md:text-lg"> <a class="underline" href="https://cherrypickreminder.substack.com/">뉴스레터</a>도 읽어보세요! </div>
                                 </div>
                                 <div slot="no-results" class="">
                                 <div class="text-gray-600 font-medium text-base md:text-lg pb-1 pb:pb-2">There's no matching results for your request 😭</div>
-                                <div class="text-gray-600 font-medium text-sm md:text-base">You can email me about this via <a href="mailto:mail@penielcho.com" class="underline">this link</a> </div>
+                                <div class="text-gray-600 font-medium text-sm md:text-base">You can email me about this via <a href="mailto:penielcho@gmail.com" class="underline">this link</a> </div>
                                 </div>
                                 <div slot="error" slot-scope="{ trigger }" class="text-gray-600 font-medium text-base md:text-lg">
                                 뭔가 문제가 있나봐요.
@@ -78,10 +75,10 @@ methods: {
     },
     fetchData() {
         return this.$content("articles")
-        .where({route: "notes"})
+        .where({route: "articles"})
         .limit(this.limit)
         .skip(this.limit * this.page)
-        .sortBy('createdAt', 'desc')
+        .sortBy('datetime', 'desc')
         .fetch();
     },
     infiniteHandler($state) {

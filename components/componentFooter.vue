@@ -5,15 +5,7 @@
                 <div class="block mb-6 md:mb-0">
                     <img class="w-10 md:w-12 md:mr-2.5 mx-auto" src="~/static/geek.png" alt="">
                 </div>
-                <div class="grid grid-cols-3 md:flex md:space-x-20">
-                    <div>
-                        <div class="text-base md:text-lg font-medium">Sitemap</div>
-                        <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
-                            <nuxt-link to="/about" class="block hover:underline">About</nuxt-link>
-                            <nuxt-link to="/articles" class="block hover:underline">Tech Articles</nuxt-link>
-                            <nuxt-link to="/notes" class="block hover:underline">Non-Tech Articles</nuxt-link>
-                        </ul>
-                    </div>
+                <div class="grid grid-cols-2 md:flex md:space-x-10">
                     <div>
                         <div class="text-base md:text-lg font-medium">Socials</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
@@ -26,8 +18,7 @@
                     <div>
                         <div class="text-base md:text-lg font-medium">Contact</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
-                            <a class="block hover:underline" href="mailto:mail@penielcho.com">Email (for Work)</a>
-                            <a class="block hover:underline" href="mailto:penielcho98@gmail.com">Email (Personal)</a>
+                            <a class="block hover:underline" href="mailto:mail@penielcho.com">Email</a>
                             <a class="block hover:underline" href="https://www.linkedin.com/in/peniel-cho">Linkedin</a>
                         </ul>
                     </div>

@@ -1,8 +1,8 @@
 <template>
       <div class="bg-transparent">
         <div class="bg-white shadow-sm md:shadow w-full rounded-lg bordergoogleblack flex items-center mb-4 py-3 md:py-3.5 pr-4">
-            <SearchIcon />
-            <input placeholder="Search Tech Articles by Keywords!" v-model="query" type="search" autocomplete="off" 
+            <iconSearch />
+            <input placeholder="키워드로 아티클 검색하기" v-model="query" type="search" autocomplete="off" 
             class="flex-auto text-sm md:text-base googletextblack pr-3.5 md:pr-6 flex items-center placeholder-text-gray-400" />
         </div>
 

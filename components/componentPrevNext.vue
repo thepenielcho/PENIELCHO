@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-between">
-        <div class="prevcom all-border w-5/12 ml-3 md:ml-0 bg-white rounded-xl p-3 md:px-8 md:py-6 group transition duration-500">
+        <div class="prevcom all-border w-5/12 ml-3 md:ml-0 bg-white rounded-xl p-3 md:px-8 md:py-6 group transition duration-100">
             <NuxtLink v-if="prev" :to="{path: `/articles/${prev.slug}`}" replace>
                 <div class="text-center md:text-left text-gray-500">Previous Post</div>
                 <div class="hidden md:block text-gray-700 font-medium mt-1">{{ prev.title }}</div>
@@ -12,7 +12,7 @@
                         </div>
             </nuxt-link>
         </div>
-        <div class="nextcom all-border w-5/12 mr-3 md:mr-0 bg-white rounded-xl p-3 md:px-8 md:py-6 group hover:bg-zinc-200 transition duration-500">
+        <div class="nextcom all-border w-5/12 mr-3 md:mr-0 bg-white rounded-xl p-3 md:px-8 md:py-6 group hover:bg-zinc-200 transition duration-100">
             <NuxtLink v-if="next" :to="{path: `/articles/${next.slug}`}" replace>
                 <div class="text-center md:text-right text-gray-500">Next Post</div>
                 <div class="hidden md:block text-right text-gray-700 font-medium mt-1 font-medium mt-1">{{ next.title }}</div>
@@ -48,10 +48,10 @@
     border-color: rgba(17, 24, 39)
 }
 .prevcom:hover{
-  background-color: #D2D5DB;
+  background-color: #F1F3F4;
 }
 .nextcom:hover{
-  background-color: #D2D5DB;
+  background-color: #F1F3F4;
 }
 .googleblue{
   background-color: #538FF7;
