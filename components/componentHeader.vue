@@ -9,10 +9,10 @@
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
                 <li>
-                    <nuxt-link class="dropdown-item px-4 py-2 block w-full" to="/" >allArticles</nuxt-link>
+                    <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/" >allArticles</nuxt-link>
                 </li>
                 <li>
-                    <nuxt-link class="dropdown-item px-4 py-2 block w-full" to="/notes">newsLetters</nuxt-link>
+                    <a class="mini-menu dropdown-item px-4 py-2 block w-full" href="https://cherrypickreminder.substack.com/" target="_blank">newsLetters ↗️</a>
                 </li>
                 </ul>
             </div>
