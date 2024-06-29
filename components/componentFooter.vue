@@ -9,17 +9,16 @@
                     <div>
                         <div class="text-base md:text-lg font-medium">Socials</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
-                            <a class="block hover:underline" href="https://www.linkedin.com/in/peniel-cho">Linkedin</a>
+                            <a class="block hover:underline" href="https://www.linkedin.com/in/penielcho">Linkedin</a>
                             <a class="block hover:underline" href="https://github.com/thepenielcho">GitHub</a>
                             <a class="block hover:underline" href="https://twitter.com/penielcho">Twitter</a>
-                            <a class="block hover:underline" href="https://www.facebook.com/thepenielcho">Facebook</a>
                         </ul>
                     </div>
                     <div>
                         <div class="text-base md:text-lg font-medium">Contact</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
                             <a class="block hover:underline" href="mailto:mail@penielcho.com">Email</a>
-                            <a class="block hover:underline" href="https://www.linkedin.com/in/peniel-cho">Linkedin</a>
+                            <a class="block hover:underline" href="https://www.linkedin.com/in/penielcho">Linkedin</a>
                         </ul>
                     </div>
                 </div>
