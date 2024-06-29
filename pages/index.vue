@@ -2,9 +2,7 @@
 <div class="w-full overflow-hidden">
 
   <componentArticleHero />
-  <componentArticleList />
-
-  <!-- <componentMarquee /> -->
+  <componentArticlePageNation />
 
 </div>
 </template>

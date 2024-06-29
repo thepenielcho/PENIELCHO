@@ -19,7 +19,10 @@ tags:
   - 벨 에포크
   - 최종적 위기
   - 체계의 카오스
-route: notes
+
+datetime: 2021-09-28
+category: Sociology
+route: articles
 ---
 
 ### 월러스틴, 브로델 비판

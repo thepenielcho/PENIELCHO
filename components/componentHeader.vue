@@ -36,7 +36,7 @@
                     </li>
                     
                     <li>
-                        <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/category" >category</nuxt-link>
+                        <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/category" >category(notLaunchedYet)</nuxt-link>
                     </li>
                     <!-- <li>
                         <nuxt-link class="dropdown-item px-4 py-2 block w-full" :to="{path: '/articles/featured'}" >featuredArticles 

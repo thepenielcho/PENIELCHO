@@ -43,6 +43,7 @@
         <div class="max-w-4xl mx-auto googletextblack px-5 pb-2.5">
             <div class="text-2xl font-medium pb-1.5">Comments 💬</div>
             <div class="text-base opacity-75">Please leave some comments here 🙌🏻 Questions, Suggestions, Cheers, Whatever!</div>
+            <componentComments class="px-6 max-w-4xl mx-auto" />
         </div>
         <componentComments class="px-6 max-w-4xl mx-auto" />
     </div>

@@ -18,7 +18,10 @@ tags:
 - 롤랑 바르트
 - 신화론
 - 탈역사화
-route: notes
+
+datetime: 2021-11-01
+category: Sociology
+route: articles
 ---
 
 알아야 할 질문들

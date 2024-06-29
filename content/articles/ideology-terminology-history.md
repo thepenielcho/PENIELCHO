@@ -15,7 +15,10 @@ tags:
   - 히틀러
   - 나치즘
   - 한나 아렌트
-route: notes
+
+datetime: 2021-09-21
+category: Sociology
+route: articles
 ---
 
 ## 데스튀트 드 트라시: 이데올로기 단어의 탄생

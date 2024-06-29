@@ -14,7 +14,9 @@ tags:
   - 요구
   - 욕망
   - 나르시즘
-route: notes
+datetime: 2021-11-22
+category: Sociology
+route: articles
 ---
 
 ## 라캉

@@ -6,7 +6,10 @@ tags:
   - 부르디외
   - 아비투스
   - 사회적 자본
-route: notes
+
+datetime: 2021-10-30
+category: Sociology
+route: articles
 ---
 
 ## 계급과 지배의 재생산

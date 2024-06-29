@@ -21,7 +21,10 @@ tags:
 - 복수극 변형
 - 과도기적 주제
 - 전문가 서부극
-route: notes
+
+datetime: 2021-10-04
+category: Sociology
+route: articles
 ---
 
 ## 레비스트로스

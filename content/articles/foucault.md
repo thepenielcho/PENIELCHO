@@ -14,7 +14,10 @@ tags:
 - 미시물리학
 - 생명권력
 - 성
-route: notes
+
+datetime: 2021-10-17
+category: Sociology
+route: articles
 ---
 
 ## 푸코

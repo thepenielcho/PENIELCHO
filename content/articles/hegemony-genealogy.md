@@ -11,7 +11,10 @@ tags:
 - 영국
 - 미국
 - 아리기
-route: notes
+
+datetime: 2022-01-30
+category: Sociology
+route: articles
 ---
 
 ![Hegemony Genealogy](/hegemony-genealogy/hegemony-transparent.png)

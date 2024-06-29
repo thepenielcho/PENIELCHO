@@ -56,7 +56,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon_files.png' }
     ]
   },
 
@@ -98,6 +98,7 @@ export default {
     'nuxt-content-git',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxt/image',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
