@@ -42,7 +42,7 @@
                         {{article.description}}
                     </p>
                     <p class="googletextblack text-xs md:text-sm">
-                        {{formatDate(article.datetime)}} · {{article.readingStats.text}} 
+                        {{formatDate(article.datetime || article.createdAt)}} · {{article.readingStats.text}} 
                         <span class="pl-1 hidden group-hover:inline transition duration-100 googletextblack">Read More</span> 
                     </p>
                 </div>
@@ -81,25 +81,51 @@ data() {
     };
 },
 
+// async fetch() {
+//     console.log('Fetching data...');
+//     try {
+//     const totalArticles = await this.$content('articles')
+//         .only(['slug'])
+//         .fetch()
+
+//     this.totalArticles = totalArticles.length
+//     console.log('Total articles:', this.totalArticles);
+
+//     this.articles = await this.$content('articles')
+//         .sortBy('datetime', 'desc')
+//         .sortBy('createdAt', 'desc')
+//         .limit(this.perPage)
+//         .skip((this.currentPage - 1) * this.perPage)
+//         .fetch()
+
+//     console.log('Fetched articles:', this.articles);
+//     } catch (error) {
+//     console.error('Error fetching data:', error);
+//     }
+// }, 기존 fetch 메서드 주석 처리(datetime만 정렬할 때의 코드)
+
 async fetch() {
-    console.log('Fetching data...');
     try {
-    const totalArticles = await this.$content('articles')
-        .only(['slug'])
+        const allArticles = await this.$content('articles')
         .fetch()
 
-    this.totalArticles = totalArticles.length
-    console.log('Total articles:', this.totalArticles);
+        this.totalArticles = allArticles.length
 
-    this.articles = await this.$content('articles')
-        .sortBy('datetime', 'desc')
-        .limit(this.perPage)
-        .skip((this.currentPage - 1) * this.perPage)
-        .fetch()
+        // Custom sorting function
+        allArticles.sort((a, b) => {
+        const dateA = new Date(a.datetime || a.createdAt);
+        const dateB = new Date(b.datetime || b.createdAt);
+        return dateB - dateA;  // Descending order
+        });
 
-    console.log('Fetched articles:', this.articles);
+        // Paginate the sorted articles
+        const startIndex = (this.currentPage - 1) * this.perPage;
+        const endIndex = startIndex + this.perPage;
+        this.articles = allArticles.slice(startIndex, endIndex);
+
+        console.log('Fetched articles:', this.articles);
     } catch (error) {
-    console.error('Error fetching data:', error);
+        console.error('Error fetching data:', error);
     }
 },
 
@@ -111,6 +137,7 @@ computed: {
 
 methods: {
     formatDate(date) {
+    if (!date) return 'Date not available';
     const options = { year: 'numeric', month: 'long', day: 'numeric' }
     return new Date(date).toLocaleDateString('ko', options)
     },
@@ -147,11 +174,6 @@ watchQuery: ['page']
 </script>
 
 <style>
-/* .nav-item:hover,
-.nav-item:active,
-.nav-item.nuxt-link-active {
-    color: #3b82f6;
-} */
 .bg-img {
         background-position: center;
         background-repeat:  no-repeat;

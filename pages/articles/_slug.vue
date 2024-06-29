@@ -4,7 +4,7 @@
     <div class="section-border py-16 md:py-24 googleyellow" >
         <div class="max-w-3xl mx-auto px-6">
             <div>
-                <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">{{article.category}} · {{formatDate(article.datetime)}}</div>
+                <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">{{article.category}} · {{formatDate(article.datetime || article.createdAt)}}</div>
                 <div class="text-2xl md:text-4xl font-semibold googletextblack text-center custom-text article-title">{{article.title}}</div>
                 <div class="text-base md:text-lg googletextblack text-center mt-5 md:mt-6 mb-6 md:mb-8 opacity-50">{{article.description}}</div>
                 <div class="flex justify-center">
@@ -77,9 +77,10 @@ export default {
     },
     methods: {
         formatDate(date) {
+        if (!date) return 'Date not available';
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('ko', options)
-        }
+}
     },
 
     head() {
@@ -157,7 +158,7 @@ export default {
                 name: 'South Korea'
                 }
             },
-            datePublished: this.article.datetime,
+            datePublished: this.article.datetime || this.article.createdAt,
             inLanguage: 'ko',
             keywords: this.article.tags
             }

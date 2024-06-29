@@ -3,7 +3,6 @@ title: 뉴스레터 안내
 description: 체리픽 리마인더라는 항공, 호텔, 금융 프로모션 정보성 뉴스레터를 만들었어요.
 slug: cherrypickreminder
 img: landing.png
-datetime: 2024-06-29
 category: 일상
 tags:
   - 뉴스레터
@@ -27,4 +26,3 @@ route: articles
 다음 링크를 통해 구독이 가능합니다. [체리픽 리마인더 구독하기](https://cherrypickreminder.substack.com)
 
 <a target="_blank" href="https://cherrypickreminder.substack.com/">![체리픽 리마인더](/cherrypickreminder/landing.png)</a>
-
