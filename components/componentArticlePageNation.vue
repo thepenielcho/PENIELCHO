@@ -16,7 +16,7 @@
                             @error="handleImageError"
                             class="w-full h-full object-cover cardborderimg bg-img">
                         </div>
-                        <div v-else 
+                        <div v-else
                             :style="{backgroundImage: 'url(/article.png)'}" 
                             :alt="article.title"
                             class="w-full h-full object-cover cardborderimg bg-img">

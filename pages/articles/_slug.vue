@@ -39,13 +39,26 @@
         </div>
     </div>
 
-    <div class="bg-white section-border pt-8 pb-6">
+    <div class="bg-white section-border pt-10 pb-9">
         <div class="max-w-4xl mx-auto googletextblack px-5 pb-2.5">
             <div class="text-2xl font-medium pb-1.5">Comments 💬</div>
-            <div class="text-base opacity-75">Please leave some comments here 🙌🏻 Questions, Suggestions, Cheers, Whatever!</div>
-            <componentComments class="px-6 max-w-4xl mx-auto" />
+            <div class="text-base opacity-75 pb-6">Please leave some comments here 🙌🏻 Questions, Suggestions, Cheers, Whatever!</div>
+            <script src="https://giscus.app/client.js"
+                data-repo="thepenielcho/PENIELCHO"
+                data-repo-id="R_kgDOHStdJg"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOHStdJs4CggP5"
+                data-mapping="title"
+                data-strict="0"
+                data-reactions-enabled="0"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="light_high_contrast"
+                data-lang="ko"
+                crossorigin="anonymous"
+                async>
+            </script>
         </div>
-        <componentComments class="px-6 max-w-4xl mx-auto" />
     </div>
 
     <div class="googlelightgrey py-14">
