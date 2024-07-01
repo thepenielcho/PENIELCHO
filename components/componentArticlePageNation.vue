@@ -14,12 +14,12 @@
                             :style="{backgroundImage: `url(${getImageSrc(article.img, article.slug)})`}"
                             :alt="article.title"
                             @error="handleImageError"
-                            class="w-full h-full object-cover cardborderimg bg-img">
+                            class="w-full h-full cardborderimg bg-img">
                         </div>
                         <div v-else
                             :style="{backgroundImage: 'url(/article.png)'}" 
                             :alt="article.title"
-                            class="w-full h-full object-cover cardborderimg bg-img">
+                            class="w-full h-full cardborderimg bg-img">
                         </div>
                     </div>
                     <div class="block md:hidden cardborder">
@@ -27,12 +27,12 @@
                             :style="{backgroundImage: `url(${getImageSrc(article.img, article.slug)})`}"
                             :alt="article.title"
                             @error="handleImageError"
-                            class="w-full h-40 object-cover cardborderimg bg-img">
+                            class="w-full h-40 cardborderimg bg-img">
                         </div>
                         <div v-else 
                         :style="{backgroundImage: 'url(/article.png)'}" 
                             :alt="article.title"
-                            class="w-full h-40 object-cover cardborderimg bg-img">
+                            class="w-full h-40 cardborderimg bg-img">
                         </div>
                     </div>
                 </div>
@@ -80,29 +80,6 @@ data() {
     totalArticles: 0
     };
 },
-
-// async fetch() {
-//     console.log('Fetching data...');
-//     try {
-//     const totalArticles = await this.$content('articles')
-//         .only(['slug'])
-//         .fetch()
-
-//     this.totalArticles = totalArticles.length
-//     console.log('Total articles:', this.totalArticles);
-
-//     this.articles = await this.$content('articles')
-//         .sortBy('datetime', 'desc')
-//         .sortBy('createdAt', 'desc')
-//         .limit(this.perPage)
-//         .skip((this.currentPage - 1) * this.perPage)
-//         .fetch()
-
-//     console.log('Fetched articles:', this.articles);
-//     } catch (error) {
-//     console.error('Error fetching data:', error);
-//     }
-// }, 기존 fetch 메서드 주석 처리(datetime만 정렬할 때의 코드)
 
 async fetch() {
     try {
@@ -254,11 +231,6 @@ watchQuery: ['page']
     border-color: rgba(17, 24, 39)
 }
 
-.top-border {
-    border-left-width: 2px;
-    border-color: rgba(17, 24, 39)
-}
-
 .section-outline {
     outline: 0 0 2 0px;
     outline-color: rgba(17, 24, 39)
@@ -283,6 +255,18 @@ watchQuery: ['page']
     border-color: rgba(17, 24, 39)
 }
 
+.cardborder{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.cardborderimg {
+    border-top-left-radius: 0.38rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.38rem;
+}
+
 @media (min-width:768px) {
     .ticker-item {
         padding: 1rem
@@ -298,18 +282,12 @@ watchQuery: ['page']
     .cardborder{
         border-top-left-radius: 0.5rem;
         border-bottom-left-radius: 0.5rem;
-        border-top-right-radius: 0rem;
+        border-top-right-radius: 0.5rem;
     }
     .cardborderimg {
-    border-top-left-radius: 0.3rem;
-    border-bottom-left-radius: 0.3rem;
-    border-top-right-radius: 0rem;
-    }
-}
-
-@media (min-width:880px) {
-    .featured-item:hover {
-        padding: 1rem
+        border-top-left-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
+        border-top-right-radius: 0.0rem;
     }
 }
 
@@ -359,68 +337,5 @@ watchQuery: ['page']
 .outline-btm {
     border-bottom: 2px solid rgba(17, 24, 39);
     margin-bottom: -2px;
-}
-
-/* 기존 스타일 유지 */
-.bg-img {
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.section-outline {
-outline: 0 0 2 0px;
-outline-color: rgba(17, 24, 39)
-}
-.border-top {
-border-top-width: 2px;
-border-color: rgba(17, 24, 39)
-}
-.left-border {
-border-left-width: 0px;
-border-color: rgba(17, 24, 39)
-}
-.googlelightgrey {
-background-color: #F1F3F4;
-}
-.googletextblack {
-color: #202124;
-}
-.keep-all {
-word-break: keep-all;
-}
-.fadeinupcom {
-animation: fadeinup 0.8s ease-out forwards;
-}
-/* @keyframes fadeinup {
-0% {
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
-}
-100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-}
-} */
-@media (min-width:768px) {
-.left-border {
-    border-left-width: 2px;
-    border-color: rgba(17, 24, 39)
-}
-.border-top {
-    border-top-width: 0px;
-    border-color: rgba(17, 24, 39)
-}
-.cardborder {
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    border-top-right-radius: 0rem;
-}
-.cardborderimg {
-    border-top-left-radius: 0.34rem;
-    border-bottom-left-radius: 0.34rem;
-    border-top-right-radius: 0rem;
-}
 }
 </style>
