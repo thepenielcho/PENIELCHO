@@ -17,7 +17,7 @@ export default {
     },
     image: {
       type: String,
-      default: 'https://www.blog.cosadama.com/not-yet-generated.png'
+      default: ''
     }
   },
 

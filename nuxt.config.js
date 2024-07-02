@@ -77,7 +77,9 @@ export default {
   plugins: [
     { src: '~/node_modules/tw-elements', mode: 'client' },
     { src: '~/plugins/vue-infinite-loading.js', mode: 'client' },
+    { src: '~/plugins/link-preview.js', mode: 'client' },
     '@/plugins/jsonld.js',
+    
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -102,10 +104,37 @@ export default {
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.devtool = 'eval-source-map'
+      }
+      // splitChunks 설정이 존재하는지 확인 후 maxSize 설정
+      if (config.optimization && config.optimization.splitChunks) {
+        config.optimization.splitChunks.maxSize = 244 * 1024
+      }
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: undefined,
+        cacheGroups: {},
+        maxSize: 244 * 1024
+      }
+    },
+    quiet: false,
+    analyze: true,
+  },
+
+  // 개발 모드에서 더 자세한 로그를 보기 위한 설정
+  cli: {
+    badgeMessages: ['Environment: <%= options.env %>'],
+    bannerColor: 'blue'
   },
 
   pwa: {

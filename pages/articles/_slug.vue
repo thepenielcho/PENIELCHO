@@ -41,8 +41,8 @@
 
     <div class="bg-white section-border pt-10 pb-9">
         <div class="max-w-4xl mx-auto googletextblack px-5 pb-2.5">
-            <div class="text-2xl font-medium pb-1.5">Comments 💬</div>
-            <div class="text-base opacity-75 pb-6">Please leave some comments here 🙌🏻 Questions, Suggestions, Cheers, Whatever!</div>
+            <div class="text-2xl font-medium pb-1.5">comments</div>
+            <div class="text-base opacity-75 pb-6">made with <a href="https://giscus.app/ko" target="_blank" class="underline">giscus</a> 🔮</div>
             <script src="https://giscus.app/client.js"
                 data-repo="thepenielcho/PENIELCHO"
                 data-repo-id="R_kgDOHStdJg"
@@ -74,26 +74,71 @@
 
 <script>
 export default {
+    components: {
+        LinkPreview: {
+        props: ['url'],
+        data() {
+            return {
+            preview: null,
+            loading: true,
+            error: null
+            }
+        },
+        mounted() {
+            this.fetchPreview();
+        },
+        methods: {
+            async fetchPreview() {
+            try {
+                this.preview = await this.$getLinkPreview(this.url);
+            } catch (error) {
+                this.error = error.message;
+            } finally {
+                this.loading = false;
+            }
+            }
+        },
+        template: `
+            <div class="link-preview">
+            <div v-if="loading">Loading preview...</div>
+            <div v-else-if="error">Error: {{ error }}</div>
+            <a v-else :href="preview.url" target="_blank" rel="noopener noreferrer">
+                <img v-if="preview.image" :src="preview.image" :alt="preview.title">
+                <h3>{{ preview.title }}</h3>
+                <p>{{ preview.description }}</p>
+            </a>
+            </div>
+        `
+        }
+    },
+
     async asyncData({ $content, params }) {
         const article = await $content('articles', params.slug)
-        .where({route: "articles"})
-        .fetch();
+            .where({route: "articles"})
+            .fetch();
 
         const [prev, next] = await $content('articles')
-        .where({route: "articles"})
-        .only(['title', 'slug'])
-        .sortBy('datetime', 'asc')
-        .surround(params.slug)
-        .fetch()
+            .where({route: "articles"})
+            .only(['title', 'slug'])
+            .sortBy('datetime', 'asc')
+            .surround(params.slug)
+            .fetch()
 
         return { article, prev, next }
     },
+
+    data() {
+        return {
+            processedContent: ''
+        }
+    },    
+
     methods: {
         formatDate(date) {
         if (!date) return 'Date not available';
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('ko', options)
-}
+        },
     },
 
     head() {
@@ -238,12 +283,12 @@ img{
     border-color: rgba(17, 24, 39)
 }
 .point-border {
-    border-width: 1.9px;
-    border-color: rgba(17, 24, 39)
+    border-width: 0.13rem;
+    border-color: #202124;
 }
 .point-border:hover {
     background-color: #F1F3F4;
-    border-width: 1.9px;
-    border-color: rgba(17, 24, 39)
+    border-width: 0.13rem;
+    border-color: #202124;
 }
 </style>

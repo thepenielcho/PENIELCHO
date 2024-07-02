@@ -27,7 +27,7 @@
         <div class="max-w-7xl px-7 md:px-14 py-5 h-24 mx-auto googletextblack">
             <div class="flex place-content-between">
                 <div class="text-xs md:text-sm">
-                    Peniel Cho <span class="text-zinc-500">© 2022</span> 
+                    Peniel Cho <span class="text-zinc-500">© 2021</span> 
                 </div>
                 <div class="text-xs md:text-sm">
                     <a href="https://nuxtjs.org/">⛰</a> on <a href="https://m.do.co/c/110fd4eb9dac">DigitalOcean</a>, 🚀 with <a href="https://www.netlify.com/">Netlify</a>

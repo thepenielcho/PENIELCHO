@@ -5,7 +5,7 @@
         <!-- <div v-if="$fetchState.pending">잠시만 기다려주세요...</div> 굳이 필요 없을 듯. 살려야 할 경우 v-else-if로 살릴 것-->
         <div v-if="$fetchState.error">Error: {{ $fetchState.error.message }}</div>
         <template v-else>
-        <div class="group" v-for="article in articles" :key="article.slug">
+        <div class="group" v-for="article in displayedArticles" :key="article.slug">
             <nuxt-link :to="{path: `/articles/${article.slug}`}">
             <div class="block md:flex rounded-lg bg-white border-item shadow-md group">
                 <div class="w-full md:w-1/2">
@@ -71,6 +71,78 @@
 </template>
 
 <script>
+export default {
+    data() {
+        return {
+        currentPage: 1,
+        perPage: 5,
+        articles: [],
+        totalArticles: 0,
+        isLoading: false
+        };
+    },
+
+    async fetch() {
+        this.isLoading = true;
+        try {
+        const allArticles = await this.$content('articles')
+            .sortBy('datetime', 'desc')
+            .fetch();
+
+        this.totalArticles = allArticles.length;
+        this.articles = allArticles;
+        } catch (error) {
+        console.error('Error fetching data:', error);
+        } finally {
+        this.isLoading = false;
+        }
+    },
+
+    computed: {
+        totalPages() {
+        return Math.ceil(this.totalArticles / this.perPage);
+        },
+        displayedArticles() {
+        const startIndex = (this.currentPage - 1) * this.perPage;
+        const endIndex = startIndex + this.perPage;
+        return this.articles.slice(startIndex, endIndex);
+        }
+    },
+
+    methods: {
+        formatDate(date) {
+        if (!date) return 'Date not available';
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(date).toLocaleDateString('ko', options);
+        },
+        async changePage(pageNum) {
+        console.log('Changing to page:', pageNum);
+        this.currentPage = pageNum;
+        // 페이지 변경 시 스크롤을 페이지 상단으로 이동
+        window.scrollTo(0, 0);
+        },
+        getImageSrc(img, slug) {
+        if (!img) return '/article.png';
+        return img.startsWith('/') ? img : `/${slug}/${img}`;
+        },
+        handleImageError(e) {
+        console.error('Image failed to load:', e.target.src);
+        e.target.src = '/article.png';
+        }
+    },
+
+    watch: {
+        '$route.query.page': {
+        immediate: true,
+        handler(newPage) {
+            this.currentPage = parseInt(newPage) || 1;
+        }
+        }
+    }
+};
+</script>
+
+<!-- <script>
 export default {
 data() {
     return {
@@ -148,7 +220,7 @@ methods: {
 
 watchQuery: ['page']
 }
-</script>
+</script> -->
 
 <style>
 .bg-img {

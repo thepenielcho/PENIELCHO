@@ -25,4 +25,4 @@ route: articles
 
 다음 링크를 통해 구독이 가능합니다. [체리픽 리마인더 구독하기](https://cherrypickreminder.substack.com)
 
-<a target="_blank" href="https://cherrypickreminder.substack.com/">![체리픽 리마인더](/cherrypickreminder/landing.png)</a>
+<link-preview url="https://cherrypickreminder.substack.com"></link-preview>

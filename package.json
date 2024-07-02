@@ -12,6 +12,8 @@
     "@nuxt/content": "^1.15.1",
     "@vue/composition-api": "^1.6.0",
     "core-js": "^3.19.3",
+    "got": "^14.4.1",
+    "isomorphic-fetch": "^3.0.0",
     "nuxt": "^2.15.8",
     "nuxt-content-git": "^2.0.14",
     "nuxt-jsonld": "^1.5.3",
