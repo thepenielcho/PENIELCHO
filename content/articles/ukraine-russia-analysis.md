@@ -17,8 +17,6 @@ route: articles
 
 > 본 아티클은 중앙대학교 사회학과 백승욱 교수의 한겨레 인터뷰 ["우크라이나와 대만 위기는 연결된다 ... "](https://www.hani.co.kr/arti/international/international_general/1034107.html)와 사회변동과 미래사회 강의의 내용을 정리한 것으로, 아티클의 내용에 관한 모든 권리는 백승욱 교수에 있습니다.
 
-<link-preview url="https://www.hani.co.kr/arti/international/international_general/1034107.html"></link-preview>
-
 ## 세계 1차 대전과의 유사점, 차이점
 
 ### 1. 강대국의 지정학적 충돌 (유사)

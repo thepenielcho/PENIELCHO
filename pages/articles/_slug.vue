@@ -42,7 +42,7 @@
     <div class="bg-white section-border pt-10 pb-9">
         <div class="max-w-4xl mx-auto googletextblack px-5 pb-2.5">
             <div class="text-2xl font-medium pb-1.5">comments</div>
-            <div class="text-base opacity-75 pb-6">made with <a href="https://giscus.app/ko" target="_blank" class="underline">giscus</a> 🔮</div>
+            <div class="text-base opacity-75 pb-5">made with <a href="https://giscus.app/ko" target="_blank" class="underline">giscus</a> 🔮</div>
             <script src="https://giscus.app/client.js"
                 data-repo="thepenielcho/PENIELCHO"
                 data-repo-id="R_kgDOHStdJg"
@@ -74,55 +74,29 @@
 
 <script>
 export default {
-    components: {
-        LinkPreview: {
-        props: ['url'],
-        data() {
-            return {
-            preview: null,
-            loading: true,
-            error: null
-            }
-        },
-        mounted() {
-            this.fetchPreview();
-        },
-        methods: {
-            async fetchPreview() {
-            try {
-                this.preview = await this.$getLinkPreview(this.url);
-            } catch (error) {
-                this.error = error.message;
-            } finally {
-                this.loading = false;
-            }
-            }
-        },
-        template: `
-            <div class="link-preview">
-            <div v-if="loading">Loading preview...</div>
-            <div v-else-if="error">Error: {{ error }}</div>
-            <a v-else :href="preview.url" target="_blank" rel="noopener noreferrer">
-                <img v-if="preview.image" :src="preview.image" :alt="preview.title">
-                <h3>{{ preview.title }}</h3>
-                <p>{{ preview.description }}</p>
-            </a>
-            </div>
-        `
-        }
-    },
-
     async asyncData({ $content, params }) {
         const article = await $content('articles', params.slug)
             .where({route: "articles"})
             .fetch();
 
-        const [prev, next] = await $content('articles')
-            .where({route: "articles"})
-            .only(['title', 'slug'])
-            .sortBy('datetime', 'asc')
-            .surround(params.slug)
-            .fetch()
+        const allArticles = await $content('articles')
+            .where({ route: "articles" })
+            .only(['title', 'slug', 'datetime', 'createdAt'])
+            .fetch();
+
+    // Custom sorting
+    allArticles.sort((a, b) => {
+            const dateA = new Date(a.datetime || a.createdAt);
+            const dateB = new Date(b.datetime || b.createdAt);
+            return dateB - dateA;  // Descending order
+        });
+
+        // Find the index of the current article
+        const currentIndex = allArticles.findIndex(a => a.slug === params.slug);
+
+        // Get prev and next
+        const next = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
+        const prev = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
 
         return { article, prev, next }
     },

@@ -24,5 +24,3 @@ route: articles
 ## 구독
 
 다음 링크를 통해 구독이 가능합니다. [체리픽 리마인더 구독하기](https://cherrypickreminder.substack.com)
-
-<link-preview url="https://cherrypickreminder.substack.com"></link-preview>
