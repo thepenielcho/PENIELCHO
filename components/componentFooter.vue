@@ -7,18 +7,19 @@
                 </div>
                 <div class="grid grid-cols-2 md:flex md:space-x-10">
                     <div>
-                        <div class="text-base md:text-lg font-medium">Socials</div>
+                        <div class="text-base md:text-lg font-medium">외부 사이트</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
-                            <a class="block hover:underline" href="https://www.linkedin.com/in/penielcho">Linkedin</a>
-                            <a class="block hover:underline" href="https://github.com/thepenielcho">GitHub</a>
-                            <a class="block hover:underline" href="https://twitter.com/penielcho">Twitter</a>
+                            <a class="block hover:underline" href="https://www.linkedin.com/in/penielcho">체리픽 리마인더</a>
+                            <a class="block hover:underline" href="https://www.linkedin.com/in/penielcho">링크드인</a>
+                            <a class="block hover:underline" href="https://github.com/thepenielcho">깃헙</a>
+                            <a class="block hover:underline" href="https://twitter.com/penielcho">인스타그램</a>
                         </ul>
                     </div>
                     <div>
-                        <div class="text-base md:text-lg font-medium">Contact</div>
+                        <div class="text-base md:text-lg font-medium">문의</div>
                         <ul class="text-sm md:text-base text-zinc-500 mt-2.5 space-y-1.5">
-                            <a class="block hover:underline" href="mailto:mail@penielcho.com">Email</a>
-                            <a class="block hover:underline" href="https://www.linkedin.com/in/penielcho">Linkedin</a>
+                            <a class="block hover:underline" href="mailto:mail@penielcho.com">이메일</a>
+                            <a class="block hover:underline" href="https://www.linkedin.com/in/penielcho">링크드인</a>
                         </ul>
                     </div>
                 </div>
@@ -27,7 +28,7 @@
         <div class="max-w-7xl px-7 md:px-14 py-5 h-24 mx-auto googletextblack">
             <div class="flex place-content-between">
                 <div class="text-xs md:text-sm">
-                    Peniel Cho <span class="text-zinc-500">© 2021</span> 
+                    Peniel Cho <span class="text-zinc-500">© 2021~2025</span> 
                 </div>
                 <div class="text-xs md:text-sm">
                     <a href="https://nuxtjs.org/">⛰</a> on <a href="https://m.do.co/c/110fd4eb9dac">DigitalOcean</a>, 🚀 with <a href="https://www.netlify.com/">Netlify</a>

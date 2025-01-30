@@ -37,7 +37,7 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Your Nearest Developer Advocate 🥑'
+          'peniel archive'
       },
       {
         hid: 'og:image',
@@ -52,7 +52,7 @@ export default {
       {
         hid: 'og:image:alt',
         property: 'og:image:alt',
-        content: 'Peniel Cho, Your Nearest Developer Advocate 🥑'
+        content: 'peniel archive'
       }
     ],
     link: [
@@ -125,7 +125,7 @@ export default {
         maxSize: 244 * 1024
       }
     },
-    quiet: false,
+    quiet: true,
     analyze: true,
   },
 
@@ -138,7 +138,7 @@ export default {
   pwa: {
     meta: {
       name: 'Peniel Cho',
-      description: 'Your Nearest Developer Advocate 🥑',
+      description: 'peniel archive', 
       theme_color: '#F1F3F4',
       lang: 'ko',
       ogHost: 'https://penielcho.com',
@@ -154,13 +154,20 @@ export default {
     manifest: {
       name: 'Peniel Cho',
       short_name: 'Peniel Cho',
-      description: 'Your Nearest Developer Advocate 🥑',
+      description: 'peniel archive',
       lang: 'ko',
       theme_color: '#F1F3F4',
       background_color: '#F1F3F4',
       display: 'standalone',
       start_url: '/',
-      icons: []
+      icons: [
+        {
+          src: '/favicon_files.png',  // static 폴더에 있는 아이콘 이미지 경로
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable'
+        }
+      ]
     },
     workbox: {
       offline: true,

@@ -12,7 +12,7 @@
                     <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/" >allArticles</nuxt-link>
                 </li>
                 <li>
-                    <a class="mini-menu dropdown-item px-4 py-2 block w-full" href="https://cherrypickreminder.substack.com/" target="_blank">newsLetters ↗️</a>
+                    <a class="mini-menu dropdown-item px-4 py-2 block w-full" href="https://cherrypickreminder.substack.com/" target="_blank">체리픽 리마인더</a>
                 </li>
                 </ul>
             </div>
@@ -28,11 +28,14 @@
             <div>
             <div class="dropdown relative">
                 <a class="dropdown-toggle flex items-center whitespace-nowrap" href="" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                articles <iconDown />
+                포스팅 <iconDown />
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
                     <li>
-                        <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/" >allArticles </nuxt-link>
+                        <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/" >모든 포스팅 </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/tags" >모든 태그 </nuxt-link>
                     </li>
                     
                     <!-- <li>
@@ -50,12 +53,21 @@
             <div>
             <div class="dropdown relative">
                 <a class="dropdown-toggle flex items-center whitespace-nowrap" href="" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                newsLetters <iconDown />
+                외부 사이트 <iconDown />
                 </a>
                 <ul class="full-border text-sm dropdown-menu absolute min-w-max hidden bg-white z-50 float-left py-2 rounded-lg text-left m-0 bg-clip-padding" aria-labelledby="dropdownMenuButton2">
                 <li>
                     <a class="mini-menu dropdown-item px-4 py-2 block w-full flex" href="https://cherrypickreminder.substack.com/" target="_blank">
-                        cherryPickReminder ↗️
+                        체리픽 리마인더
+                    </a>
+                    <a class="mini-menu dropdown-item px-4 py-2 block w-full flex" href="https://cherrypickreminder.substack.com/" target="_blank">
+                        링크드인
+                    </a>
+                    <a class="mini-menu dropdown-item px-4 py-2 block w-full flex" href="https://cherrypickreminder.substack.com/" target="_blank">
+                        깃헙
+                    </a>
+                    <a class="mini-menu dropdown-item px-4 py-2 block w-full flex" href="https://cherrypickreminder.substack.com/" target="_blank">
+                        인스타그램
                     </a>
                 </li>
                 </ul>
@@ -69,9 +81,9 @@
     <a href="https://github.com/thepenielcho" target="_blank">
         <iconGitHub class="h-5 md:h-7" />
     </a>
-    <a href="https://www.linkedin.com/in/penielcho/" target="_blank">
+    <!-- <a href="https://www.linkedin.com/in/penielcho/" target="_blank">
         <IconLinkedin class="h-5 md:h-7" />
-    </a>
+    </a> -->
 </div>
 </div>
 </template>

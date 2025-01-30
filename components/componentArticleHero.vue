@@ -1,6 +1,6 @@
 <template>
-<div class="googleyellow section-border py-16 md:py-24">
-    <div class="items-center justify-center">
+<!-- <div class="googleyellow section-border py-16 md:py-24"> -->
+    <!-- <div class="items-center justify-center">
         <div>
             <div class="flex justify-center">
             <div class="flex items-center">
@@ -8,17 +8,75 @@
             </div>
             </div>
         </div>
-    </div>
-    <div class="w-full googleyellow">
+    </div> -->
+    <!-- <div class="w-full googleyellow">
         <div class="pt-8 md:pt-12 max-w-3xl mx-auto">
         <componentSearch class="px-6 md:px-3" />
+        </div>
+    </div>    
+</div> -->
+<div class="googleyellow section-border py-16 md:py-24">
+    <div class="w-full googleyellow">
+        <div class="pt-8 md:pt-12 max-w-3xl mx-auto">
+            <componentSearch class="px-6 md:px-3" />
+            <!-- 인기 태그 섹션 추가 -->
+            <div class="px-6 md:px-3 mt-8">
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <NuxtLink
+                        v-for="tag in topTags"
+                        :key="tag.name"
+                        :to="`/tags/${tag.name}`"
+                        class="googlelightgrey px-3 py-1 rounded-full text-sm border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-colors duration-200"
+                    >
+                        {{ tag.name }} ({{ tag.count }})
+                    </NuxtLink>
+                    <NuxtLink 
+                        to="/tags"
+                        class="googlelightgrey px-4 py-1 rounded-full text-sm border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-colors duration-200 font-medium"
+                    >
+                        모든 태그 보기
+                    </NuxtLink>
+                </div>
+            </div>
         </div>
     </div>    
 </div>
 </template>
 
+<!-- <script>
+export default {
+}
+</script> -->
+
 <script>
 export default {
+    data() {
+        return {
+            topTags: []
+        }
+    },
+    async fetch() {
+        // content 디렉토리의 모든 글을 가져옵니다
+        const articles = await this.$content('articles')
+            .only(['tags'])
+            .fetch()
+
+        // 태그 카운트를 계산합니다
+        const tagCount = {}
+        articles.forEach(article => {
+            if (article.tags) {
+                article.tags.forEach(tag => {
+                    tagCount[tag] = (tagCount[tag] || 0) + 1
+                })
+            }
+        })
+
+        // 태그를 카운트 기준으로 정렬하고 상위 10개를 선택합니다
+        this.topTags = Object.entries(tagCount)
+            .map(([name, count]) => ({ name, count }))
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 10)
+    }
 }
 </script>
 
