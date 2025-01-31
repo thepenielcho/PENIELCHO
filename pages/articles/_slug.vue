@@ -1,10 +1,19 @@
 <template>
+<div>
     <div class="related">
-
-    <div class="section-border py-16 md:py-24 googleyellow" >
-        <div class="max-w-3xl mx-auto px-6">
-            <div>
-                <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">{{article.category}} · {{formatDate(article.datetime || article.createdAt)}}</div>
+        <div class="section-border py-16 md:py-24 googleyellow" >
+            <div class="max-w-3xl mx-auto px-6">
+                <div>
+                    <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">
+                        <NuxtLink 
+                            :to="`/categories/${article.category}`"
+                            class="hover:underline">
+                            {{article.category}}
+                        </NuxtLink>
+                        · {{formatDate(article.datetime || article.createdAt)}}
+                    </div>
+                </div>
+                <!-- <div class="text-base md:text-base font-medium googletextblack text-center mb-2 md:mb-3">{{article.category}} · {{formatDate(article.datetime || article.createdAt)}}</div> -->
                 <div class="text-2xl md:text-4xl font-semibold googletextblack text-center custom-text article-title">{{article.title}}</div>
                 <div class="text-base md:text-lg googletextblack text-center mt-5 md:mt-6 mb-6 md:mb-8 opacity-50">{{article.description}}</div>
                 <div class="flex justify-center">
@@ -28,57 +37,54 @@
     </div>
 
 
-    <div class="googlelightgrey section-border">
-        <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 pt-10 md:pt-16 pb-4 md:pb-6 mx-auto fadeinupcom"/>
-        <!-- <div class="px-6 space-x-2 mx-auto max-w-4xl text-center pb-10 md:pb-16">
-            <div v-for="tag of article.tags" :key="tag" class="inline">
-                <span class="text-zinc-700 px-3 md:px-4 py-2 md:py-2.5 bg-white point-border rounded-full inline-block mt-3 text-sm md:text-base">
-                    {{tag}}
-                </span>
-            </div>
-        </div> -->
-        <div class="px-6 space-x-2 mx-auto max-w-4xl text-center pb-10 md:pb-16">
-            <div v-for="tag of article.tags" :key="tag" class="inline">
-                <NuxtLink 
-                    :to="`/tags/${tag}`" 
-                    class="text-zinc-700 px-3 md:px-4 py-2 md:py-2.5 bg-white point-border rounded-full inline-block mt-3 text-sm md:text-base hover:cursor-pointer">
-                    {{tag}}
-                </NuxtLink>
+        <div class="googlelightgrey section-border">
+            <nuxt-content :document="article" class="prose max-w-4xl custom-text px-6 pt-10 md:pt-16 pb-4 md:pb-6 mx-auto fadeinupcom"/>
+            <!-- <div class="px-6 space-x-2 mx-auto max-w-4xl text-center pb-10 md:pb-16">
+                <div v-for="tag of article.tags" :key="tag" class="inline">
+                    <span class="text-zinc-700 px-3 md:px-4 py-2 md:py-2.5 bg-white point-border rounded-full inline-block mt-3 text-sm md:text-base">
+                        {{tag}}
+                    </span>
+                </div>
+            </div> -->
+            <div class="px-6 space-x-2 mx-auto max-w-4xl text-center pb-10 md:pb-16 mt-4">
+                <div v-for="tag of article.tags" :key="tag" class="inline">
+                    <NuxtLink 
+                        :to="`/tags/${tag}`" 
+                        class="bg-white px-3 md:px-4 py-2 md:py-3 rounded-full text-sm md:text-base border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-colors duration-200">
+                        {{tag}}
+                    </NuxtLink>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="bg-white section-border pt-10 pb-9">
-        <div class="max-w-4xl mx-auto googletextblack px-5 pb-2.5">
-            <div class="text-2xl font-medium pb-1.5">comments</div>
-            <div class="text-base opacity-75 pb-5">made with <a href="https://giscus.app/ko" target="_blank" class="underline">giscus</a> 🔮</div>
-            <script src="https://giscus.app/client.js"
-                data-repo="thepenielcho/PENIELCHO"
-                data-repo-id="R_kgDOHStdJg"
-                data-category="Announcements"
-                data-category-id="DIC_kwDOHStdJs4CggP5"
-                data-mapping="title"
-                data-strict="0"
-                data-reactions-enabled="0"
-                data-emit-metadata="0"
-                data-input-position="bottom"
-                data-theme="light_high_contrast"
-                data-lang="ko"
-                crossorigin="anonymous"
-                async>
-            </script>
+    <!-- class="text-zinc-700 px-3 md:px-4 py-2 md:py-2.5 bg-white point-border rounded-full inline-block mt-3 text-sm md:text-base hover:cursor-pointer"> -->
+
+        <div class="bg-white section-border pt-10 pb-9">
+            <div class="max-w-4xl mx-auto googletextblack px-5 pb-2.5">
+                <div class="text-2xl font-medium pb-1.5">comments</div>
+                <div class="text-base opacity-75 pb-5">made with <a href="https://giscus.app/ko" target="_blank" class="underline">giscus</a> 🔮</div>
+                <script src="https://giscus.app/client.js"
+                    data-repo="thepenielcho/PENIELCHO"
+                    data-repo-id="R_kgDOHStdJg"
+                    data-category="Announcements"
+                    data-category-id="DIC_kwDOHStdJs4CggP5"
+                    data-mapping="title"
+                    data-strict="0"
+                    data-reactions-enabled="0"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="light_high_contrast"
+                    data-lang="ko"
+                    crossorigin="anonymous"
+                    async>
+                </script>
+            </div>
         </div>
-    </div>
 
-    <div class="googlelightgrey py-14">
-        <componentPrevNext class="max-w-4xl px-5 mx-auto" :prev="prev" :next="next" />
-
-    </div>
-
-
-
-
-    </div>
+        <div class="googlelightgrey py-14">
+            <componentPrevNext class="max-w-4xl px-5 mx-auto" :prev="prev" :next="next" />
+        </div>
+</div>
 </template>
 
 <script>
