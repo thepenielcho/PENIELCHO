@@ -35,9 +35,11 @@
                         <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/" >모든 포스팅 </nuxt-link>
                     </li>
                     <li>
+                        <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/categories" >모든 카테고리 </nuxt-link>
+                    </li>
+                    <li>
                         <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/tags" >모든 태그 </nuxt-link>
                     </li>
-                    
                     <!-- <li>
                         <nuxt-link class="mini-menu dropdown-item px-4 py-2 block w-full" to="/category" >준비 중인 메뉴</nuxt-link>
                     </li> -->
